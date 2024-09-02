@@ -5,6 +5,7 @@ const models = require('../models'); // Importa todos os modelos automaticamente
 
 // Função para gerar rotas CRUD genéricas
 Object.keys(models).forEach((key) => {
+
   const model = models[key];
 
   // Define rotas CRUD genéricas
@@ -12,19 +13,23 @@ Object.keys(models).forEach((key) => {
   router.get(`/${key}`, genericController.getAll(model));
   router.put(`/${key}/:id`, genericController.update(model));
   router.delete(`/${key}/:id`, genericController.remove(model));
+
 });
 
-  // Rota genérica para atualizar relações N para M
-  // Exemplo: Atualizar as moedas associadas à estratégia 1
-  // Rota: /relation/Estrategia/1/ParMoeda
-  router.put('/putmanytomany/:modelName/:id/:relatedModelName', async (req, res) => {
-    await genericController.updateManyToManyRelation(req, res);
-  });
+// Rota genérica para atualizar relações N para M
+// Exemplo: Atualizar as moedas associadas à estratégia 1
+// Rota: /relation/Estrategia/1/ParMoeda
+router.put('/putmanytomany/:modelName/:id/:relatedModelName', async (req, res) => {
+
+  await genericController.updateManyToManyRelation(req, res);
+
+});
 
 // Rota genérica para associações N para M
 // Exemplo para listar todas as moedas e uma lista de id's das moedas cuja estratégia 1 esteja relacionada
 // /getmanytomany/Estrategia/1/ParMoeda/
 router.get('/getmanytomany/:modelName/:id/:relatedModelName', async (req, res) => {
+
   const { modelName, id, relatedModelName } = req.params;
 
   // Obtém os modelos principal e relacionado com base nos parâmetros da URL
@@ -50,6 +55,7 @@ router.get('/getmanytomany/:modelName/:id/:relatedModelName', async (req, res) =
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
+  
 });
 
 module.exports = router;
