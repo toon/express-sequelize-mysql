@@ -1,10 +1,16 @@
 // server.js
 const express = require('express');
+const cors = require('cors');
 const { sequelize, ParMoeda, Estrategia } = require('./models');
 const genericRoutes = require('./routes/genericRoutes');
 require('dotenv').config();
 
 const app = express();
+
+// Middleware CORS
+app.use(cors({
+    origin: 'http://localhost:8081' // Permite essa origem específica
+  }));
 
 app.use(express.json());
 app.use('/api', genericRoutes);

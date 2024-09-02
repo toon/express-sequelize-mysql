@@ -6,6 +6,10 @@ const Estrategia = sequelize.define('Estrategia', {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    descricao: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     ativo: {
         type: DataTypes.BOOLEAN,
         allowNull: true,
