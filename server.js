@@ -26,6 +26,7 @@ async function insertInitialData() {
             { nome: 'BATUSDT', ativo: 'false' },
         ]);
         const aaveusdt = await ParMoeda.create({ nome: 'AAVEUSDT', ativo: 'true' });
+        const btcusdt = await ParMoeda.findOne();
         await Estrategia.bulkCreate([
             { nome: 'Pullback de baixa 3 2 3', descricao: 'Compra quando cai 3%, vende quando sobe 2% ou cai mais 3%', ativo: 'true' },
             { nome: 'Pullback de baixa 2 1.5 3', descricao: 'Compra quando cai 2%, vende quando sobe 1.5% ou cai mais 3%', ativo: 'true' },
@@ -33,6 +34,7 @@ async function insertInitialData() {
         const estrategia = await Estrategia.create({ nome: 'Pullback de baixa 1.5 1.2 1.1', descricao: 'Compra quando cai 1.5%, vende quando sobe 1.2% ou cai mais 1.1%', ativo: 'true' });
 
         estrategia.addParMoeda(aaveusdt);
+        estrategia.addParMoeda(btcusdt);
 
 
     } catch (error) {
