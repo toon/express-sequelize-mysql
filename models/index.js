@@ -2,6 +2,13 @@
 const sequelize = require('../config/db');
 const Estrategia = require('./Estrategia');
 const ParMoeda = require('./ParMoeda');
+const Ticker = require('./Ticker');
+const Carteira = require('./Carteira');
+const Operacao = require('./Operacao');
+const TipoOperacao = require('./TipoOperacao');
+const TipoProvento = require('./TipoProvento');
+const Provento = require('./Provento');
+const Dashboard = require('./Dashboard');
 // const User = require('./User');
 // const Post = require('./Post');
 // const Project = require('./Project');
@@ -15,7 +22,39 @@ const ParMoeda = require('./ParMoeda');
 ParMoeda.belongsToMany(Estrategia, { through: 'EstrategiaParMoeda' });
 Estrategia.belongsToMany(ParMoeda, { through: 'EstrategiaParMoeda' });
 
-const models = { ParMoeda, Estrategia };
+Carteira.belongsToMany(Ticker, { through: 'CarteiraTicker' });
+Ticker.belongsToMany(Carteira, { through: 'CarteiraTicker' });
+
+Operacao.belongsTo(TipoOperacao);
+TipoOperacao.hasMany(Operacao)
+Operacao.belongsTo(Ticker);
+Ticker.hasMany(Operacao);
+Operacao.belongsTo(Carteira);
+Carteira.hasMany(Operacao);
+
+Provento.belongsTo(TipoProvento);
+TipoProvento.hasMany(Provento);
+Provento.belongsTo(Carteira);
+Carteira.hasMany(Provento);
+Provento.belongsTo(Ticker);
+Ticker.hasMany(Provento);
+
+Dashboard.belongsTo(Carteira);
+Carteira.hasMany(Dashboard);
+Dashboard.belongsTo(Ticker);
+Ticker.hasMany(Dashboard);
+
+const models = { 
+    ParMoeda, 
+    Estrategia, 
+    Ticker, 
+    Carteira,
+    Operacao,
+    TipoOperacao,
+    TipoProvento,
+    Provento,
+    Dashboard
+ };
 
 // const models = { User, Post, Project };
 

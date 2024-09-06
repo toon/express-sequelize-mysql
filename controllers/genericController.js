@@ -2,6 +2,41 @@ const { Op } = require('sequelize');
 const sequelize = require('../config/db');
 const models = require('../models');
 
+const getAllwithAssociations = (Model) => async (req, res) => {
+    try {
+        const query = req.query; // Captura os parâmetros de query da requisição
+        let where = {};
+
+        // Para cada campo em query, adicionar uma condição no objeto where
+        Object.keys(query).forEach(key => {
+            if (Array.isArray(query[key])) {
+                // Se o valor for um array, usar o operador 'IN'
+                where[key] = { [Op.in]: query[key] };
+            } else {
+                // Caso contrário, usar o operador 'LIKE' para buscas parciais
+                where[key] = { [Op.like]: `%${query[key]}%` };
+            }
+        });
+
+        // Identificar e incluir associações automaticamente
+        const include = [];
+        if (Model.associations) {
+            // Adiciona as associações ao include
+            Object.keys(Model.associations).forEach(association => {
+                include.push(Model.associations[association]);
+            });
+        }
+
+        // Incluir dados relacionados com base nas associações encontradas
+        const items = await Model.findAll({ where, include });
+
+        res.status(200).json(items);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
+
+
 // Função para obter todos os itens relacionados a partir de uma relação N:M
 const getAllWithRelated = (Model, RelatedModel, relationName) => async (req, res) => {
     const { id } = req.params;
@@ -169,4 +204,5 @@ module.exports = {
     remove,
     getAllWithRelated,
     updateManyToManyRelation,
+    getAllwithAssociations,
 };

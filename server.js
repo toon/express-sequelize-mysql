@@ -1,16 +1,26 @@
 // server.js
 const express = require('express');
 const cors = require('cors');
-const { sequelize, ParMoeda, Estrategia } = require('./models');
+
+const { sequelize, 
+    ParMoeda, 
+    Estrategia, 
+    Ticker, 
+    Carteira, 
+    TipoOperacao, 
+    Operacao, 
+    TipoProvento,
+    Provento,
+    Dashboard
+} = require('./models');
+
 const genericRoutes = require('./routes/genericRoutes');
 require('dotenv').config();
 
 const app = express();
 
 // Middleware CORS
-app.use(cors({
-    origin: 'http://localhost:8081' // Permite essa origem específica
-  }));
+app.use(cors());
 
 app.use(express.json());
 app.use('/api', genericRoutes);
@@ -35,6 +45,64 @@ async function insertInitialData() {
 
         estrategia.addParMoeda(aaveusdt);
         estrategia.addParMoeda(btcusdt);
+        
+        await Ticker.bulkCreate([
+            { nome: 'BBAS3', descricao: 'Banco do Brasil SA', ativo: 'true' },
+            { nome: 'BBDC4', descricao: 'Banco Bradesco SA', ativo: 'false' },
+        ]);
+
+        await Carteira.bulkCreate([
+            { nome: 'MAGAR Brasil', ativo: 'true' },
+        ]);
+
+        await TipoOperacao.bulkCreate([
+            { nome: 'Compra', ativo: 'true' },
+            { nome: 'Venda', ativo: 'true' },
+        ]);
+
+        await TipoProvento.bulkCreate([
+            { nome: 'Dividendos', ativo: 'true' },
+            { nome: 'JCP', ativo: 'true' },
+            { nome: 'Rendimentos', ativo: 'true' },
+        ]);
+
+        await Operacao.bulkCreate([
+            {   data: '2024-09-04', 
+                quantidade: 200,
+                valor_unitario: 99.96,
+                taxas: 6.60,
+                TipoOperacaoId: 1,
+                TickerId: 1,
+                CarteiraId: 1,
+            },
+        ]);
+
+        await Provento.bulkCreate([
+            {   data: '2024-09-05', 
+                valor_unitario: 1.96,
+                total: 60.60,
+                TipoProventoId: 1,
+                TickerId: 1,
+                CarteiraId: 1,
+            },
+        ]);
+
+        await Dashboard.bulkCreate([
+            {   quantidade: 100, 
+                preco_medio: 1.96,
+                investido: 10000,
+                proventos: 135,
+                TickerId: 1,
+                CarteiraId: 1,
+            },
+            {   quantidade: 150, 
+                preco_medio: 8.96,
+                investido: 12000,
+                proventos: 0,
+                TickerId: 2,
+                CarteiraId: 1,
+            },
+        ]);
 
 
     } catch (error) {

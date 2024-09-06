@@ -11,6 +11,7 @@ Object.keys(models).forEach((key) => {
   // Define rotas CRUD genéricas
   router.post(`/${key}`, genericController.create(model));
   router.get(`/${key}`, genericController.getAll(model));
+  router.get(`/${key}s`, genericController.getAllwithAssociations(model));
   router.put(`/${key}/:id`, genericController.update(model));
   router.delete(`/${key}/:id`, genericController.remove(model));
 
