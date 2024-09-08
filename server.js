@@ -49,6 +49,7 @@ async function insertInitialData() {
         await Ticker.bulkCreate([
             { nome: 'BBAS3', descricao: 'Banco do Brasil SA', ativo: 'true' },
             { nome: 'BBDC4', descricao: 'Banco Bradesco SA', ativo: 'false' },
+            { nome: 'DMVF3', descricao: 'DMVF3', ativo: 'true' },
         ]);
 
         await Carteira.bulkCreate([
@@ -100,6 +101,13 @@ async function insertInitialData() {
                 investido: 12000,
                 proventos: 0,
                 TickerId: 2,
+                CarteiraId: 1,
+            },
+            {   quantidade: 150, 
+                preco_medio: 8.96,
+                investido: 12000,
+                proventos: 0,
+                TickerId: 3,
                 CarteiraId: 1,
             },
         ]);
