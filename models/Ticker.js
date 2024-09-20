@@ -15,7 +15,8 @@ const Ticker = sequelize.define('Ticker', {
         allowNull: true,
     }
 }, {
-    timestamps: true
+    timestamps: true,
+    tableName: 'ticker'
 });
 
 module.exports = Ticker;

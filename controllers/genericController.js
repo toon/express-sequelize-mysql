@@ -1,6 +1,69 @@
-const { Op } = require('sequelize');
+const { Op, fn, col } = require('sequelize');
 const sequelize = require('../config/db');
 const models = require('../models');
+const fs = require('fs');
+const csvParser = require('csv-parser');
+
+const importCsv = async (req, res, model) => {
+  const filePath = req.file.path;
+  const results = [];
+
+  fs.createReadStream(filePath)
+    .pipe(csvParser())
+    .on('data', (data) => {
+        // Verifica e remove o "BOM" da primeira chave (se presente)
+        const keys = Object.keys(data);
+        if (keys[0].charCodeAt(0) === 65279) {
+          const cleanKey = keys[0].replace(/^\uFEFF/, ''); // Remove o BOM
+          data[cleanKey] = data[keys[0]]; // Corrige o campo
+          delete data[keys[0]]; // Remove o campo incorreto
+        }
+        
+        results.push(data);
+    })
+    .on('end', async () => {
+      try {
+        console.log(results);
+        // Inserir dados no banco de forma dinâmica com base no modelo recebido
+        await model.bulkCreate(results);
+        res.json({ message: 'Dados importados com sucesso!' });
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Falha ao importar dados.' });
+      } finally {
+        fs.unlinkSync(filePath); // Apaga o arquivo após o processamento
+      }
+    });
+};
+
+// Função genérica para obter registros com associação, agregação e filtros dinâmicos via query params
+const getAllWithAggregations = (Model, aggregationField, aggregationType, filter) => async (req, res) => {
+    try {
+        const { ativos } = req.query;  // 'ativos' será uma lista de códigos passada na query string
+        const listaAtivos = ativos ? ativos.split(',') : [];  // Converte a lista de ativos em array
+        let where = {};
+        
+        if (listaAtivos.length > 0) {
+            where[filter] = {
+                [Op.in]: listaAtivos  // Aplica o filtro para múltiplos ativos
+            };
+        }
+
+        const agregacao = await Model.findAll({
+            attributes: [
+                filter,
+                [fn(aggregationType, col(aggregationField)), `agg_${aggregationField}`]
+            ],
+            where,
+            group: [filter]
+        });
+
+        res.json(agregacao);
+
+    } catch (error) {
+        res.status(500).json({ error: 'Erro ao obter agregação' });
+    }
+};
 
 const getAllwithAssociations = (Model) => async (req, res) => {
     try {
@@ -205,4 +268,6 @@ module.exports = {
     getAllWithRelated,
     updateManyToManyRelation,
     getAllwithAssociations,
+    getAllWithAggregations,
+    importCsv,
 };

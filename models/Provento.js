@@ -15,7 +15,8 @@ const Provento = sequelize.define('Provento', {
         allowNull: false,
     },
 }, {
-    timestamps: true
+    timestamps: true,
+    tableName: 'provento'
 });
 
 module.exports = Provento;

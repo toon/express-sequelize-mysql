@@ -19,7 +19,7 @@ const Dashboard = sequelize.define('Dashboard', {
         allowNull: false,
     },
 }, {
-    timestamps: true
+    timestamps: false
 });
 
 module.exports = Dashboard;
