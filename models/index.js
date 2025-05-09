@@ -7,6 +7,7 @@ const Carteira = require('./Carteira');
 const Operacao = require('./Operacao');
 const TipoOperacao = require('./TipoOperacao');
 const TipoProvento = require('./TipoProvento');
+const TipoAtivo = require('./TipoAtivo');
 const Provento = require('./Provento');
 const Dashboard = require('./Dashboard');
 // const User = require('./User');
@@ -44,6 +45,9 @@ Carteira.hasMany(Dashboard);
 Dashboard.belongsTo(Ticker);
 Ticker.hasMany(Dashboard);
 
+Ticker.belongsTo(TipoAtivo);
+TipoAtivo.hasMany(Ticker);
+
 const models = { 
     ParMoeda, 
     Estrategia, 
@@ -52,6 +56,7 @@ const models = {
     Operacao,
     TipoOperacao,
     TipoProvento,
+    TipoAtivo,
     Provento,
     Dashboard
  };

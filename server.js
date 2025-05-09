@@ -10,6 +10,7 @@ const { sequelize,
     TipoOperacao, 
     Operacao, 
     TipoProvento,
+    TipoAtivo,
     Provento,
     Dashboard
 } = require('./models');
@@ -46,12 +47,21 @@ async function insertInitialData() {
         estrategia.addParMoeda(aaveusdt);
         estrategia.addParMoeda(btcusdt);
         
+        await TipoAtivo.bulkCreate([
+            { nome: 'Ações', ativo: 'true' },
+            { nome: 'FII', ativo: 'true' },
+            { nome: 'ETF', ativo: 'true' },
+            { nome: 'Stocks', ativo: 'true' },
+            { nome: 'ETF USA', ativo: 'true' },
+            { nome: 'Cripto', ativo: 'true' },
+        ]);
+
         await Ticker.bulkCreate([
-            { nome: 'BBAS3.SA', descricao: 'Banco do Brasil SA', ativo: 'true' },
-            { nome: 'BBDC4.SA', descricao: 'Banco Bradesco SA', ativo: 'false' },
-            { nome: 'DMVF3.SA', descricao: 'DMVF3', ativo: 'true' },
-            { nome: 'CMIG4.SA', descricao: 'CMIG4', ativo: 'true' },
-            { nome: 'CMIN3.SA', descricao: 'CMIN3', ativo: 'true' },
+            { nome: 'BBAS3.SA', descricao: 'Banco do Brasil SA', ativo: 'true', TipoAtivoId: 1 },
+            { nome: 'BBDC4.SA', descricao: 'Banco Bradesco SA', ativo: 'false', TipoAtivoId: 1 },
+            { nome: 'DMVF3.SA', descricao: 'DMVF3', ativo: 'true', TipoAtivoId: 1 },
+            { nome: 'CMIG4.SA', descricao: 'CMIG4', ativo: 'true', TipoAtivoId: 1 },
+            { nome: 'CMIN3.SA', descricao: 'CMIN3', ativo: 'true', TipoAtivoId: 1 },
             
         ]);
 
