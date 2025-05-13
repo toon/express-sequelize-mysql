@@ -18,6 +18,11 @@ const Dashboard = sequelize.define('Dashboard', {
         type: DataTypes.DOUBLE,
         allowNull: false,
     },
+    lucro_realizado: {
+        type: DataTypes.DOUBLE,
+        allowNull: true,
+    },
+    
 }, {
     timestamps: false
 });
