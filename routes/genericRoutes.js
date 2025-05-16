@@ -32,10 +32,12 @@ Object.keys(models).forEach((key) => {
   // Define rotas CRUD genéricas
   router.post(`/${key}`, genericController.create(model));
   router.get(`/${key}`, genericController.getAll(model));
+  router.get(`/${key}e`, genericController.getAllExactly(model));
   router.get(`/${key}s`, genericController.getAllwithAssociations(model));
+  router.get(`/${key}se`, genericController.getAllwithAssociationsExactly(model));
   router.put(`/${key}/:id`, genericController.update(model));
   router.delete(`/${key}/:id`, genericController.remove(model));
-
+  
 });
 
 // Rota genérica para atualizar relações N para M
