@@ -40,6 +40,18 @@ Object.keys(models).forEach((key) => {
   
 });
 
+// Nova rota: GET /:modelName/with?include=relacao1,relacao2
+router.get('/:modelName/with', async (req, res) => {
+  const { modelName } = req.params;
+  const model = models[modelName];
+
+  if (!model) {
+    return res.status(404).json({ error: 'Modelo não encontrado' });
+  }
+
+  await genericController.getAllWithSelectedAssociations(model)(req, res);
+});
+
 // Rota genérica para atualizar relações N para M
 // Exemplo: Atualizar as moedas associadas à estratégia 1
 // Rota: /relation/Estrategia/1/ParMoeda

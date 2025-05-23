@@ -65,6 +65,39 @@ const getAllWithAggregations = (Model, aggregationField, aggregationType, filter
     }
 };
 
+const getAllWithSelectedAssociations = (Model) => async (req, res) => {
+    try {
+        const query = { ...req.query };
+        const includeNames = query.include ? query.include.split(',') : [];
+        delete query.include;
+
+        let where = {};
+        Object.keys(query).forEach(key => {
+            if (Array.isArray(query[key])) {
+                where[key] = { [Op.in]: query[key] };
+            } else {
+                where[key] = { [Op.like]: `%${query[key]}%` };
+            }
+        });
+
+        const include = [];
+        if (Model.associations) {
+            includeNames.forEach(name => {
+                if (Model.associations[name]) {
+                    include.push(Model.associations[name]);
+                }
+            });
+        }
+
+        const items = await Model.findAll({ where, include });
+        res.status(200).json(items);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
+
+
+
 const getAllwithAssociations = (Model) => async (req, res) => {
     try {
         const query = req.query; // Captura os parâmetros de query da requisição
@@ -332,4 +365,5 @@ module.exports = {
     getAllWithAggregations,
     getAllExactly,
     importCsv,
+    getAllWithSelectedAssociations,
 };
