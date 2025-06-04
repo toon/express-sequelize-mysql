@@ -250,13 +250,13 @@ async function insertInitialData() {
             { data: '2025-05-15', quantidade: 400, valor_unitario: 7.80, taxas: 0.93, TipoOperacaoId: 1, TickerId: 23, CarteiraId: 1 },
             { data: '2024-03-19', quantidade: 33.04656, valor_unitario: 199.72, taxas: 0.00, TipoOperacaoId: 1, TickerId: 41, CarteiraId: 2 },
             { data: '2024-10-09', quantidade: 2.67025, valor_unitario: 232.39, taxas: 0.00, TipoOperacaoId: 1, TickerId: 41, CarteiraId: 2 },
-            { data: '2025-05-15', quantidade: 1.69965, valor_unitario: 294.18, taxas: 0.00, TipoOperacaoId: 1, TickerId: 41, CarteiraId: 2 },
+            { data: '2025-05-15', quantidade: 1.69965, valor_unitario: 294.18, taxas: 0.00, TipoOperacaoId: 1, TickerId: 41, CarteiraId: 2, cotacao_dolar: 5.63 },
             { data: '2024-03-19', quantidade: 65.94718, valor_unitario: 100.54, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2 },
             { data: '2024-08-07', quantidade: 0.20838, valor_unitario: 100.39, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2 },
             { data: '2024-10-09', quantidade: 5.97312, valor_unitario: 100.45, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2 },
             { data: '2024-07-11', quantidade: 0.20878, valor_unitario: 100.39, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2 },
             { data: '2025-04-16', quantidade: 0.19795, valor_unitario: 100.53, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2 },
-            { data: '2025-05-15', quantidade: 5.14375, valor_unitario: 100.52, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2 },
+            { data: '2025-05-15', quantidade: 5.14375, valor_unitario: 100.52, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2, cotacao_dolar: 5.63 },
             { data: '2024-03-12', quantidade: 122.31757, valor_unitario: 40.88, taxas: 0.00, TipoOperacaoId: 1, TickerId: 42, CarteiraId: 1 },
             { data: '2024-04-05', quantidade: 0.78005, valor_unitario: 44.12, taxas: 0.00, TipoOperacaoId: 1, TickerId: 42, CarteiraId: 1 },
             { data: '2024-07-03', quantidade: 0.32122, valor_unitario: 44.61, taxas: 0.00, TipoOperacaoId: 1, TickerId: 42, CarteiraId: 1 },
@@ -273,6 +273,11 @@ async function insertInitialData() {
             { data: '2025-03-10', quantidade: 0.14103, valor_unitario: 519.32, taxas: 0.00, TipoOperacaoId: 1, TickerId: 43, CarteiraId: 1 },
             { data: '2025-05-19', quantidade: 500, valor_unitario: 37.94, taxas: 0, TipoOperacaoId: 1, TickerId: 18, CarteiraId: 1 },
             { data: '2025-05-19', quantidade: 113, valor_unitario: 133.42, taxas: 0, TipoOperacaoId: 2, TickerId: 3, CarteiraId: 1 },
+            { data: '2025-05-06', quantidade: 80, valor_unitario: 15.57, taxas: 0.37, TipoOperacaoId: 2, TickerId: 21, CarteiraId: 1 },
+            { data: '2025-05-06', quantidade: 100, valor_unitario: 15.55, taxas: 0.47, TipoOperacaoId: 2, TickerId: 21, CarteiraId: 1 },
+            { data: '2025-05-06', quantidade: 1100, valor_unitario: 15.56, taxas: 5.13, TipoOperacaoId: 2, TickerId: 21, CarteiraId: 1 },
+            { data: '2025-05-30', quantidade: 800, valor_unitario: 23.90, taxas: 5.74, TipoOperacaoId: 2, TickerId: 27, CarteiraId: 1 },
+            { data: '2025-06-04', quantidade: 800, valor_unitario: 23.52, taxas: 5.64, TipoOperacaoId: 1, TickerId: 27, CarteiraId: 1 },
         ]);
 
         await Provento.bulkCreate([
@@ -374,6 +379,7 @@ async function insertInitialData() {
             { data: '2024-07-02', valor_unitario: 1.25, total: 14.33, TipoProventoId: 1, TickerId: 43, CarteiraId: 1 },
             { data: '2024-01-10', valor_unitario: 1.14, total: 13.17, TipoProventoId: 1, TickerId: 43, CarteiraId: 1 },
             { data: '2025-03-31', valor_unitario: 1.28, total: 16.89, TipoProventoId: 1, TickerId: 43, CarteiraId: 1 },
+            { data: '2025-06-02', valor_unitario: 0.02, total: 20.64, TipoProventoId: 2, TickerId: 21, CarteiraId: 1 }, 
         ]);
 
 

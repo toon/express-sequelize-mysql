@@ -10,6 +10,10 @@ const Provento = sequelize.define('Provento', {
         type: DataTypes.DOUBLE,
         allowNull: false,
     },
+    cotacao_dolar: {
+        type: DataTypes.DOUBLE,
+        allowNull: true,
+    },
     total: {
         type: DataTypes.DOUBLE,
         allowNull: false,

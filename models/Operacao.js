@@ -14,6 +14,10 @@ const Operacao = sequelize.define('Operacao', {
         type: DataTypes.DOUBLE,
         allowNull: false,
     },
+    cotacao_dolar: {
+        type: DataTypes.DOUBLE,
+        allowNull: true,
+    },
     taxas: {
         type: DataTypes.DOUBLE,
         allowNull: false,
