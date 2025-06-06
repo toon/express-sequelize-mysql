@@ -10,15 +10,31 @@ const Dashboard = sequelize.define('Dashboard', {
         type: DataTypes.DOUBLE,
         allowNull: false,
     },
+    preco_medio_real: {
+        type: DataTypes.DOUBLE,
+        allowNull: true,
+    },
     investido: {
         type: DataTypes.DOUBLE,
         allowNull: false,
+    },
+    investido_real: {
+        type: DataTypes.DOUBLE,
+        allowNull: true,
     },
     proventos: {
         type: DataTypes.DOUBLE,
         allowNull: false,
     },
+    proventos_real: {
+        type: DataTypes.DOUBLE,
+        allowNull: true,
+    },
     lucro_realizado: {
+        type: DataTypes.DOUBLE,
+        allowNull: true,
+    },
+    lucro_realizado_real: {
         type: DataTypes.DOUBLE,
         allowNull: true,
     },

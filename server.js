@@ -133,10 +133,10 @@ async function insertInitialData() {
             { data: '2025-04-09', quantidade: 123, valor_unitario: 131.69, taxas: 4.86, TipoOperacaoId: 2, TickerId: 3, CarteiraId: 1 },
             { data: '2025-04-23', quantidade: 80, valor_unitario: 132.26, taxas: 3.17, TipoOperacaoId: 1, TickerId: 3, CarteiraId: 1 },
             { data: '2025-05-09', quantidade: 71, valor_unitario: 132.99, taxas: 2.83, TipoOperacaoId: 1, TickerId: 3, CarteiraId: 1 },
-            { data: '2025-01-21', quantidade: 1, valor_unitario: 223.00, taxas: 0.00, TipoOperacaoId: 1, TickerId: 6, CarteiraId: 1 },
-            { data: '2025-02-14', quantidade: 1, valor_unitario: 407.05, taxas: 0.00, TipoOperacaoId: 1, TickerId: 2, CarteiraId: 1 },
-            { data: '2025-02-03', quantidade: 2, valor_unitario: 115.62, taxas: 0.00, TipoOperacaoId: 1, TickerId: 4, CarteiraId: 1 },
-            { data: '2025-03-10', quantidade: 3, valor_unitario: 107.62, taxas: 0.00, TipoOperacaoId: 1, TickerId: 4, CarteiraId: 1 },
+            { data: '2025-01-21', quantidade: 1, valor_unitario: 223.00, taxas: 0.00, TipoOperacaoId: 1, TickerId: 6, CarteiraId: 1, cotacao_dolar: 6.18 },
+            { data: '2025-02-14', quantidade: 1, valor_unitario: 407.05, taxas: 0.00, TipoOperacaoId: 1, TickerId: 2, CarteiraId: 1, cotacao_dolar: 5.92 },
+            { data: '2025-02-03', quantidade: 2, valor_unitario: 115.62, taxas: 0.00, TipoOperacaoId: 1, TickerId: 4, CarteiraId: 1, cotacao_dolar: 5.92 },
+            { data: '2025-03-10', quantidade: 3, valor_unitario: 107.62, taxas: 0.00, TipoOperacaoId: 1, TickerId: 4, CarteiraId: 1, cotacao_dolar: 5.71 },
             { data: '2024-03-20', quantidade: 200, valor_unitario: 28.08, taxas: 1.68, TipoOperacaoId: 1, TickerId: 22, CarteiraId: 1 },
             { data: '2024-03-21', quantidade: 144, valor_unitario: 27.92, taxas: 1.21, TipoOperacaoId: 1, TickerId: 22, CarteiraId: 1 },
             { data: '2024-11-11', quantidade: 100, valor_unitario: 26.02, taxas: 0.78, TipoOperacaoId: 1, TickerId: 22, CarteiraId: 1 },
@@ -248,15 +248,15 @@ async function insertInitialData() {
             { data: '2024-05-22', quantidade: 50, valor_unitario: 30.06, taxas: 0.44, TipoOperacaoId: 1, TickerId: 12, CarteiraId: 1 },
             { data: '2025-01-31', quantidade: 50, valor_unitario: 32.20, taxas: 0.48, TipoOperacaoId: 2, TickerId: 12, CarteiraId: 1 },
             { data: '2025-05-15', quantidade: 400, valor_unitario: 7.80, taxas: 0.93, TipoOperacaoId: 1, TickerId: 23, CarteiraId: 1 },
-            { data: '2024-03-19', quantidade: 33.04656, valor_unitario: 199.72, taxas: 0.00, TipoOperacaoId: 1, TickerId: 41, CarteiraId: 2 },
-            { data: '2024-10-09', quantidade: 2.67025, valor_unitario: 232.39, taxas: 0.00, TipoOperacaoId: 1, TickerId: 41, CarteiraId: 2 },
-            { data: '2025-05-15', quantidade: 1.69965, valor_unitario: 294.18, taxas: 0.00, TipoOperacaoId: 1, TickerId: 41, CarteiraId: 2, cotacao_dolar: 5.63 },
-            { data: '2024-03-19', quantidade: 65.94718, valor_unitario: 100.54, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2 },
-            { data: '2024-08-07', quantidade: 0.20838, valor_unitario: 100.39, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2 },
-            { data: '2024-10-09', quantidade: 5.97312, valor_unitario: 100.45, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2 },
-            { data: '2024-07-11', quantidade: 0.20878, valor_unitario: 100.39, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2 },
-            { data: '2025-04-16', quantidade: 0.19795, valor_unitario: 100.53, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2 },
-            { data: '2025-05-15', quantidade: 5.14375, valor_unitario: 100.52, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2, cotacao_dolar: 5.63 },
+            { data: '2024-03-19', quantidade: 33.04656, valor_unitario: 199.72, taxas: 0.00, TipoOperacaoId: 1, TickerId: 41, CarteiraId: 2, cotacao_dolar: 5.09 },
+            { data: '2024-09-10', quantidade: 2.67025, valor_unitario: 232.39, taxas: 0.00, TipoOperacaoId: 1, TickerId: 41, CarteiraId: 2, cotacao_dolar: 5.66 },
+            { data: '2025-05-15', quantidade: 1.69965, valor_unitario: 294.18, taxas: 0.00, TipoOperacaoId: 1, TickerId: 41, CarteiraId: 2, cotacao_dolar: 5.77 },
+            { data: '2024-03-19', quantidade: 65.94718, valor_unitario: 100.54, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2, cotacao_dolar: 5.09 },
+            { data: '2024-08-07', quantidade: 0.20838, valor_unitario: 100.39, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2, cotacao_dolar: 5.63},
+            { data: '2024-09-10', quantidade: 5.97312, valor_unitario: 100.45, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2, cotacao_dolar: 5.66 },
+            { data: '2024-07-11', quantidade: 0.20878, valor_unitario: 100.39, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2, cotacao_dolar: 5.43 },
+            { data: '2025-04-16', quantidade: 0.19795, valor_unitario: 100.53, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2, cotacao_dolar: 5.90 },
+            { data: '2025-05-15', quantidade: 5.14375, valor_unitario: 100.52, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2, cotacao_dolar: 5.77 },
             { data: '2024-03-12', quantidade: 122.31757, valor_unitario: 40.88, taxas: 0.00, TipoOperacaoId: 1, TickerId: 42, CarteiraId: 1 },
             { data: '2024-04-05', quantidade: 0.78005, valor_unitario: 44.12, taxas: 0.00, TipoOperacaoId: 1, TickerId: 42, CarteiraId: 1 },
             { data: '2024-07-03', quantidade: 0.32122, valor_unitario: 44.61, taxas: 0.00, TipoOperacaoId: 1, TickerId: 42, CarteiraId: 1 },
@@ -421,64 +421,7 @@ async function insertInitialData() {
     }
   }
 
-// // Função para criar procedimentos armazenados
-// async function createStoredProcedures() {
-//     const sql = `
-//       CREATE PROCEDURE atualiza_dashboards(carteira_id INT, ticker_id INT)
-//       BEGIN
-//           -- Remove os dados existentes para a carteira e ticker correspondentes
-//           DELETE FROM Dashboards
-//           WHERE tickerid = ticker_id
-//           AND CarteiraId = carteira_id;
-  
-//           -- Reinsere os novos dados atualizados
-//           INSERT INTO Dashboards (CarteiraId, tickerid, preco_medio, quantidade, investido, proventos)
-//           SELECT 
-//               operacoes.CarteiraId,
-//               operacoes.tickerid,
-//               ROUND(operacoes.preco_medio, 2) AS preco_medio,
-//               operacoes.qtde,
-//               operacoes.investido,
-//               COALESCE(proventos.proventos, 0) AS proventos
-//           FROM 
-//               (
-//                   SELECT 
-//                       o.CarteiraId, 
-//                       o.tickerid, 
-//                       SUM(o.quantidade * o.valor_unitario + o.taxas) / SUM(o.quantidade) AS preco_medio, 
-//                       (SUM(CASE WHEN o.tipooperacaoId = 1 THEN quantidade ELSE 0 END) +
-//                       SUM(CASE WHEN o.tipooperacaoId = 3 THEN quantidade ELSE 0 END) -
-// 					  SUM(CASE WHEN o.tipooperacaoId = 2 THEN quantidade ELSE 0 END)) AS qtde, 
-//                       SUM(o.quantidade * o.valor_unitario + o.taxas) AS investido
-//                   FROM 
-//                       operacaos o
-//                   WHERE 
-//                       o.CarteiraId = carteira_id
-//                       AND o.tickerid = ticker_id
-//                   GROUP BY o.CarteiraId, o.tickerid
-//               ) AS operacoes
-//           LEFT JOIN
-//               (
-//                   SELECT 
-//                       p.CarteiraId,
-//                       p.tickerid,
-//                       COALESCE(SUM(p.total), 0) AS proventos
-//                   FROM 
-//                       provento p
-//                   WHERE 
-//                       p.CarteiraId = carteira_id
-//                       AND p.tickerid = ticker_id
-//                   GROUP BY p.CarteiraId, p.tickerid
-//               ) AS proventos
-//           ON 
-//               operacoes.CarteiraId = proventos.CarteiraId
-//               AND operacoes.tickerid = proventos.tickerid;
-//       END;
-//     `;
-  
-//     await sequelize.query(sql);
-//   }
-  
+
 
 // Função para criar procedimentos armazenados
 async function createStoredProcedures() {
@@ -650,6 +593,237 @@ END;
   
 await sequelize.query(sql);
 }
+
+
+// // Função para criar procedimentos armazenados
+// async function createStoredProcedures() {
+//     const sql = `
+
+// CREATE PROCEDURE atualiza_dashboards(carteira_id INT, ticker_id INT)
+// BEGIN
+//     -- Remove os dados existentes para a carteira e ticker correspondentes
+//     DELETE FROM Dashboards
+//     WHERE tickerid = ticker_id
+//     AND CarteiraId = carteira_id;
+    
+//     -- Calcula todos os indicadores com base nas últimas operações
+//     INSERT INTO Dashboards (CarteiraId, tickerid, preco_medio, quantidade, investido, proventos, lucro_realizado)
+//     WITH 
+//     -- 1. Calcula o saldo atual do ativo para a carteira específica
+//     saldo_atual AS (
+//         SELECT 
+//             CarteiraId,
+//             TickerId,
+//             (SUM(CASE WHEN TipoOperacaoId = 1 THEN quantidade ELSE 0 END) +  -- Compras
+//              SUM(CASE WHEN TipoOperacaoId = 3 THEN quantidade ELSE 0 END) +  -- Bonificações
+//              SUM(CASE WHEN TipoOperacaoId = 4 THEN quantidade ELSE 0 END) -  -- Subscrições
+//              SUM(CASE WHEN TipoOperacaoId = 2 THEN quantidade ELSE 0 END)) AS saldo  -- Vendas
+//         FROM operacaos
+//         WHERE CarteiraId = carteira_id
+//         AND TickerId = ticker_id
+//         GROUP BY CarteiraId, TickerId
+//         HAVING saldo > 0
+//     ),
+    
+//     -- 2. Ordena as operações por data DESC (compras, bonificações e subscrições)
+//     operacoes_ordenadas AS (
+//         SELECT 
+//             o.*,
+//             ROW_NUMBER() OVER (PARTITION BY o.CarteiraId, o.TickerId ORDER BY o.data DESC, o.id DESC) AS ordem_operacao_reversa,
+//             -- Bonificações têm valor zerado, subscrições têm valor normal
+//             CASE WHEN o.TipoOperacaoId = 3 THEN 0 ELSE o.valor_unitario END AS valor_ajustado,
+//             -- Bonificações têm taxas zeradas, subscrições têm taxas normais
+//             CASE WHEN o.TipoOperacaoId = 3 THEN 0 ELSE o.taxas END AS taxas_ajustadas
+//         FROM operacaos o
+//         WHERE o.TipoOperacaoId IN (1, 3, 4)  -- 1 = compra, 3 = bonificação, 4 = subscrição
+//         AND o.CarteiraId = carteira_id
+//         AND o.TickerId = ticker_id
+//     ),
+    
+//     -- 3. Calcula o acumulado começando pelas operações mais recentes
+//     operacoes_com_acumulado AS (
+//         SELECT 
+//             a.*,
+//             (SELECT SUM(b.quantidade) 
+//              FROM operacoes_ordenadas b 
+//              WHERE b.CarteiraId = a.CarteiraId 
+//              AND b.TickerId = a.TickerId
+//              AND b.ordem_operacao_reversa <= a.ordem_operacao_reversa) AS acumulado_reverso
+//         FROM operacoes_ordenadas a
+//     ),
+    
+//     -- 4. Determina quanto de cada operação deve ser considerado (começando pelas últimas)
+//     operacoes_parciais AS (
+//         SELECT 
+//             c.*,
+//             s.saldo AS saldo_atual,
+//             CASE
+//                 WHEN (SELECT COALESCE(SUM(d.quantidade), 0) 
+//                      FROM operacoes_com_acumulado d 
+//                      WHERE d.CarteiraId = c.CarteiraId 
+//                      AND d.TickerId = c.TickerId
+//                      AND d.ordem_operacao_reversa < c.ordem_operacao_reversa) >= s.saldo THEN 0
+//                 WHEN c.acumulado_reverso > s.saldo THEN 
+//                     s.saldo - (SELECT COALESCE(SUM(d.quantidade), 0) 
+//                               FROM operacoes_com_acumulado d 
+//                               WHERE d.CarteiraId = c.CarteiraId 
+//                               AND d.TickerId = c.TickerId
+//                               AND d.ordem_operacao_reversa < c.ordem_operacao_reversa)
+//                 ELSE c.quantidade
+//             END AS quantidade_considerar,
+//             -- Bonificações têm valor total zerado, subscrições têm valor normal
+//             (c.valor_ajustado * c.quantidade + c.taxas_ajustadas) AS valor_total_operacao
+//         FROM operacoes_com_acumulado c
+//         JOIN saldo_atual s ON c.CarteiraId = s.CarteiraId AND c.TickerId = s.TickerId
+//         WHERE (SELECT COALESCE(SUM(d.quantidade), 0) 
+//                FROM operacoes_com_acumulado d 
+//                WHERE d.CarteiraId = c.CarteiraId 
+//                AND d.TickerId = c.TickerId
+//                AND d.ordem_operacao_reversa < c.ordem_operacao_reversa) < s.saldo
+//     ),
+    
+//     -- 5. Calcula preço médio e valor investido com base nas últimas operações
+//     dados_ativos AS (
+//         SELECT 
+//             p.CarteiraId,
+//             p.TickerId,
+//             -- Preço médio (considera compras e subscrições, bonificações não entram no cálculo)
+//             SUM(CASE WHEN p.TipoOperacaoId IN (1, 4) THEN p.quantidade_considerar * p.valor_ajustado + 
+//                 (p.taxas_ajustadas * (p.quantidade_considerar/p.quantidade)) ELSE 0 END) / 
+//             SUM(p.quantidade_considerar) AS preco_medio,
+//             -- Quantidade atual
+//             MAX(p.saldo_atual) AS quantidade,
+//             -- Valor investido (soma de compras e subscrições)
+//             SUM(CASE WHEN p.TipoOperacaoId IN (1, 4) THEN p.quantidade_considerar * p.valor_ajustado + 
+//                 (p.taxas_ajustadas * (p.quantidade_considerar/p.quantidade)) ELSE 0 END) AS investido
+//         FROM operacoes_parciais p
+//         WHERE p.quantidade_considerar > 0
+//         GROUP BY p.CarteiraId, p.TickerId
+//     ),
+    
+//     -- 6. Calcula o lucro realizado (apenas vendas válidas)
+//     lucro_realizado AS (
+//         SELECT 
+//             v.CarteiraId,
+//             v.TickerId,
+//             SUM(v.quantidade * v.valor_unitario - v.quantidade * 
+//                 (SELECT SUM(CASE WHEN c.TipoOperacaoId IN (1,4) THEN c.quantidade * c.valor_unitario + c.taxas ELSE 0 END) / 
+//                  SUM(CASE WHEN c.TipoOperacaoId IN (1,3,4) THEN c.quantidade ELSE 0 END)
+//                  FROM operacaos c
+//                  WHERE c.TickerId = v.TickerId
+//                  AND c.CarteiraId = v.CarteiraId
+//                  AND c.TipoOperacaoId IN (1,3,4)  -- Considera compras, bonificações e subscrições
+//                  AND (c.data < v.data OR (c.data = v.data AND c.id < v.id))) - v.taxas) AS lucro_total
+//         FROM operacaos v
+//         WHERE v.TipoOperacaoId = 2  -- 2 = venda
+//         AND v.CarteiraId = carteira_id
+//         AND v.TickerId = ticker_id
+//         -- Verifica se havia saldo suficiente antes da venda
+//         AND (SELECT SUM(CASE WHEN TipoOperacaoId IN (1,3,4) THEN quantidade ELSE -quantidade END)
+//              FROM operacaos 
+//              WHERE TickerId = v.TickerId
+//              AND CarteiraId = v.CarteiraId
+//              AND (data < v.data OR (data = v.data AND id < v.id))) >= v.quantidade
+//         GROUP BY v.CarteiraId, v.TickerId
+//     )
+    
+//     -- Insere os dados na tabela Dashboards
+//     SELECT 
+//         da.CarteiraId,
+//         da.TickerId,
+//         ROUND(da.preco_medio, 2) AS preco_medio,
+//         da.quantidade,
+//         ROUND(da.investido, 2) AS investido,
+//         COALESCE(pr.proventos, 0) AS proventos,
+//         COALESCE(lr.lucro_total, 0) AS lucro_realizado
+//     FROM 
+//         dados_ativos da
+//     LEFT JOIN
+//         (
+//             SELECT 
+//                 p.CarteiraId,
+//                 p.TickerId,
+//                 COALESCE(SUM(p.total), 0) AS proventos
+//             FROM 
+//                 provento p
+//             WHERE 
+//                 p.CarteiraId = carteira_id
+//                 AND p.TickerId = ticker_id
+//             GROUP BY p.CarteiraId, p.TickerId
+//         ) pr
+//     ON 
+//         da.CarteiraId = pr.CarteiraId
+//         AND da.TickerId = pr.TickerId
+//     LEFT JOIN
+//         lucro_realizado lr
+//     ON 
+//         da.CarteiraId = lr.CarteiraId
+//         AND da.TickerId = lr.TickerId;
+// END;
+
+// `;
+  
+// await sequelize.query(sql);
+// }
+
+// // Função para criar procedimentos armazenados
+// async function createStoredProcedures() {
+//     const sql = `
+//       CREATE PROCEDURE atualiza_dashboards(carteira_id INT, ticker_id INT)
+//       BEGIN
+//           -- Remove os dados existentes para a carteira e ticker correspondentes
+//           DELETE FROM Dashboards
+//           WHERE tickerid = ticker_id
+//           AND CarteiraId = carteira_id;
+  
+//           -- Reinsere os novos dados atualizados
+//           INSERT INTO Dashboards (CarteiraId, tickerid, preco_medio, quantidade, investido, proventos)
+//           SELECT 
+//               operacoes.CarteiraId,
+//               operacoes.tickerid,
+//               ROUND(operacoes.preco_medio, 2) AS preco_medio,
+//               operacoes.qtde,
+//               operacoes.investido,
+//               COALESCE(proventos.proventos, 0) AS proventos
+//           FROM 
+//               (
+//                   SELECT 
+//                       o.CarteiraId, 
+//                       o.tickerid, 
+//                       SUM(o.quantidade * o.valor_unitario + o.taxas) / SUM(o.quantidade) AS preco_medio, 
+//                       (SUM(CASE WHEN o.tipooperacaoId = 1 THEN quantidade ELSE 0 END) +
+//                       SUM(CASE WHEN o.tipooperacaoId = 3 THEN quantidade ELSE 0 END) -
+// 					  SUM(CASE WHEN o.tipooperacaoId = 2 THEN quantidade ELSE 0 END)) AS qtde, 
+//                       SUM(o.quantidade * o.valor_unitario + o.taxas) AS investido
+//                   FROM 
+//                       operacaos o
+//                   WHERE 
+//                       o.CarteiraId = carteira_id
+//                       AND o.tickerid = ticker_id
+//                   GROUP BY o.CarteiraId, o.tickerid
+//               ) AS operacoes
+//           LEFT JOIN
+//               (
+//                   SELECT 
+//                       p.CarteiraId,
+//                       p.tickerid,
+//                       COALESCE(SUM(p.total), 0) AS proventos
+//                   FROM 
+//                       provento p
+//                   WHERE 
+//                       p.CarteiraId = carteira_id
+//                       AND p.tickerid = ticker_id
+//                   GROUP BY p.CarteiraId, p.tickerid
+//               ) AS proventos
+//           ON 
+//               operacoes.CarteiraId = proventos.CarteiraId
+//               AND operacoes.tickerid = proventos.tickerid;
+//       END;
+//     `;
+  
+//     await sequelize.query(sql);
+//   }
+  
 
 // // Função para criar procedimentos armazenados
 // async function createStoredProcedures() {
