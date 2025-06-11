@@ -278,6 +278,7 @@ async function insertInitialData() {
             { data: '2025-05-06', quantidade: 1100, valor_unitario: 15.56, taxas: 5.13, TipoOperacaoId: 2, TickerId: 21, CarteiraId: 1 },
             { data: '2025-05-30', quantidade: 800, valor_unitario: 23.90, taxas: 5.74, TipoOperacaoId: 2, TickerId: 27, CarteiraId: 1 },
             { data: '2025-06-04', quantidade: 800, valor_unitario: 23.52, taxas: 5.64, TipoOperacaoId: 1, TickerId: 27, CarteiraId: 1 },
+            { data: '2025-06-06', quantidade: 0.22259, valor_unitario: 100.45, taxas: 0.00, TipoOperacaoId: 1, TickerId: 40, CarteiraId: 2 },
         ]);
 
         await Provento.bulkCreate([
@@ -375,6 +376,7 @@ async function insertInitialData() {
             { data: '2025-03-06', valor_unitario: 0.45, total: 15.90, TipoProventoId: 1, TickerId: 40, CarteiraId: 2 },
             { data: '2025-04-04', valor_unitario: 0.45, total: 17.57, TipoProventoId: 1, TickerId: 40, CarteiraId: 2 },
             { data: '2025-05-06', valor_unitario: 0.45, total: 17.05, TipoProventoId: 1, TickerId: 40, CarteiraId: 2 },
+            { data: '2025-06-05', valor_unitario: 0.45, total: 22.00, TipoProventoId: 1, TickerId: 40, CarteiraId: 2 },
             { data: '2024-03-27', valor_unitario: 1.54, total: 11.42, TipoProventoId: 1, TickerId: 43, CarteiraId: 1 },
             { data: '2024-07-02', valor_unitario: 1.25, total: 14.33, TipoProventoId: 1, TickerId: 43, CarteiraId: 1 },
             { data: '2024-01-10', valor_unitario: 1.14, total: 13.17, TipoProventoId: 1, TickerId: 43, CarteiraId: 1 },
