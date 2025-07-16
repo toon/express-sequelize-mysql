@@ -10,6 +10,10 @@ const TipoProvento = require('./TipoProvento');
 const TipoAtivo = require('./TipoAtivo');
 const Provento = require('./Provento');
 const Moeda = require('./Moeda');
+const Opcao = require('./Opcao');
+const TipoOpcaoStatus = require('./TipoOpcaoStatus');
+const TipoOpcaoOperacao = require('./TipoOpcaoOperacao');
+const TipoOpcaoPeriodo = require('./TipoOpcaoPeriodo');
 const Dashboard = require('./Dashboard');
 // const User = require('./User');
 // const Post = require('./Post');
@@ -20,6 +24,15 @@ const Dashboard = require('./Dashboard');
 // Post.belongsTo(User);
 // User.belongsToMany(Project, { through: 'UserProjects' });
 // Project.belongsToMany(User, { through: 'UserProjects' });
+
+Opcao.belongsTo(TipoOpcaoOperacao);
+TipoOpcaoOperacao.hasMany(Opcao)
+Opcao.belongsTo(TipoOpcaoStatus);
+TipoOpcaoStatus.hasMany(Opcao)
+Opcao.belongsTo(TipoOpcaoPeriodo);
+TipoOpcaoPeriodo.hasMany(Opcao)
+Opcao.belongsTo(Ticker);
+Ticker.hasMany(Opcao)
 
 ParMoeda.belongsToMany(Estrategia, { through: 'EstrategiaParMoeda' });
 Estrategia.belongsToMany(ParMoeda, { through: 'EstrategiaParMoeda' });
@@ -63,6 +76,10 @@ const models = {
     TipoAtivo,
     Provento,
     Moeda,
+    Opcao,
+    TipoOpcaoStatus,
+    TipoOpcaoOperacao,
+    TipoOpcaoPeriodo,
     Dashboard
  };
 
