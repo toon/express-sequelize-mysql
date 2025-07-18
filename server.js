@@ -37,11 +37,16 @@ async function insertInitialData() {
     try {
         // Insere dados iniciais
         await TipoOpcaoStatus.bulkCreate([
-            { nome: 'Virou pó', ativo: 'true' },
             { nome: 'Em andamento', ativo: 'true' },
-            { nome: 'Ordem enviada', ativo: 'true' },
-            { nome: 'Comprada', ativo: 'true' },
-            { nome: 'Vendida', ativo: 'true' },
+            { nome: 'Encerrada', ativo: 'true' },
+            { nome: 'Exercido', ativo: 'true' },
+            { nome: 'Pó', ativo: 'true' },
+        ]);
+        await TipoOpcaoOperacao.bulkCreate([
+            { nome: 'Compra de CALL', ativo: 'true' },
+            { nome: 'Compra de PUT', ativo: 'true' },
+            { nome: 'Venda de CALL', ativo: 'true' },
+            { nome: 'Venda de PUT', ativo: 'true' },
         ]);
         await ParMoeda.bulkCreate([
             { nome: 'BTCUSDT', ativo: 'true' },
