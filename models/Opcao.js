@@ -6,7 +6,11 @@ const Opcao = sequelize.define('Opcao', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    vencimento: {
+    data_abertura: {
+        type: DataTypes.DATE,
+        allowNull: false,
+    },
+    data_vencimento: {
         type: DataTypes.DATE,
         allowNull: false,
     },
@@ -30,9 +34,26 @@ const Opcao = sequelize.define('Opcao', {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
     },
+    resultado: {
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: true,
+    },
+    taxas: {
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: true,
+    },
+    data_recompra: {
+        type: DataTypes.DATE,
+        allowNull: true,
+    },
+    preco_recompra: {
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: true,
+    },
+    
 }, {
     timestamps: true,
-    tableName: 'opcao'
+    tableName: 'Opcao'
 });
 
 module.exports = Opcao;
