@@ -345,6 +345,7 @@ async function insertInitialData() {
             { data: '2025-06-18', quantidade: 20, valor_unitario: 135.72, taxas: 0.81, TipoOperacaoId: 1, TickerId: 44, CarteiraId: 3 },
             { data: '2025-07-24', quantidade: 2, valor_unitario: 136.89, taxas: 0.08, TipoOperacaoId: 1, TickerId: 3, CarteiraId: 3 },
             { data: '2025-03-04', quantidade: 1, valor_unitario: 202.26, taxas: 0.00, TipoOperacaoId: 1, TickerId: 6, CarteiraId: 3 },
+            { data: '2025-07-31', quantidade: 146, valor_unitario: 137.27, taxas: 6.01, TipoOperacaoId: 2, TickerId: 3, CarteiraId: 3 },
         ]);
 
         await Provento.bulkCreate([
