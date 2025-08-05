@@ -23,7 +23,8 @@ const Operacao = sequelize.define('Operacao', {
         allowNull: false,
     },
 }, {
-    timestamps: true
+    timestamps: true,
+    tableName: 'operacaos'
 });
 
 module.exports = Operacao;
