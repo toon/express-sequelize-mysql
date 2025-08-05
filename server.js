@@ -127,21 +127,22 @@ async function insertInitialData() {
             { nome: 'IAU', descricao: 'iShares Gold', ativo: 'true', TipoAtivoId: 5, MoedaId: 2 },
             { nome: 'VOO', descricao: 'Vanguard S&P 500', ativo: 'true', TipoAtivoId: 5, MoedaId: 2 },            
             { nome: 'BOVA11.SA', descricao: 'iShare Bovaci', ativo: 'true', TipoAtivoId: 3, MoedaId: 1 },
+            { nome: 'LFTB11.SA', descricao: 'INVESTO ETF', ativo: 'true', TipoAtivoId: 2, MoedaId: 1 },
         ]);
 
         await Opcao.bulkCreate([
-            { nome: 'BOVAF138W4', TickerId: 44, TipoOpcaoStatusId: 2, data_abertura: '2025-07-01', data_vencimento: '2025-07-11', 
+            { nome: 'BOVAG136W2', TickerId: 44, TipoOpcaoStatusId: 2, data_abertura: '2025-07-01', data_vencimento: '2025-07-11', 
                 preco_aquisicao: 135.72, quantidade: 20, TipoOpcaoOperacaoId: 3, TipoOpcaoPeriodoId: 2, investido: 2714.40, 
                 strike: 136.00, premio: 1.52, taxas: 0.03, data_recompra: '2025-07-11', preco_recompra: 0.01, resultado: 30.17 },
-            { nome: 'BOVAG136W2', TickerId: 44, TipoOpcaoStatusId: 4, data_abertura: '2025-06-18', data_vencimento: '2025-06-27', 
+            { nome: 'BOVAF138W4', TickerId: 44, TipoOpcaoStatusId: 4, data_abertura: '2025-06-18', data_vencimento: '2025-06-27', 
                 preco_aquisicao: 135.72, quantidade: 20, TipoOpcaoOperacaoId: 3, TipoOpcaoPeriodoId: 2, investido: 2714.40, 
                 strike: 138.00, premio: 0.59, taxas: 0.00, resultado: 11.80 },
-            { nome: 'BBDCT154W1', TickerId: 21, TipoOpcaoStatusId: 1, data_abertura: '2025-07-14', data_vencimento: '2025-08-01', 
+            { nome: 'BBDCT154W1', TickerId: 21, TipoOpcaoStatusId: 4, data_abertura: '2025-07-14', data_vencimento: '2025-08-01', 
                 preco_aquisicao: 15.56, quantidade: 1300, TipoOpcaoOperacaoId: 4, TipoOpcaoPeriodoId: 2, investido: 20228.00, 
-                strike: 15.21, premio: 0.19, taxas: 0.00 },
-            { nome: 'BOVAH137', TickerId: 44, TipoOpcaoStatusId: 1, data_abertura: '2025-07-14', data_vencimento: '2025-08-15', 
+                strike: 15.21, premio: 0.19, taxas: 0.30, resultado: 246.70 },
+            { nome: 'BOVAH137', TickerId: 44, TipoOpcaoStatusId: 2, data_abertura: '2025-07-14', data_vencimento: '2025-08-15', 
                 preco_aquisicao: 135.72, quantidade: 20, TipoOpcaoOperacaoId: 3, TipoOpcaoPeriodoId: 1, investido: 2714.40, 
-                strike: 137.00, premio: 1.00, taxas: 0.00 },
+                strike: 137.00, premio: 1.00, taxas: 0.00, data_recompra: '2025-08-04', preco_recompra: 0.09, resultado: 16.60 },
             { nome: 'CYRET234', TickerId: 30, TipoOpcaoStatusId: 2, data_abertura: '2025-07-18', data_vencimento: '2025-08-15', 
                 preco_aquisicao: 24.35, quantidade: 400, TipoOpcaoOperacaoId: 4, TipoOpcaoPeriodoId: 1, investido: 9740.00, 
                 strike: 23.43, premio: 0.32, taxas: 0.24, data_recompra: '2025-07-21', preco_recompra: 0.10, resultado: 87.76 },
@@ -151,6 +152,12 @@ async function insertInitialData() {
             { nome: 'CYRET234', TickerId: 30, TipoOpcaoStatusId: 1, data_abertura: '2025-07-24', data_vencimento: '2025-08-15', 
                 preco_aquisicao: 24.35, quantidade: 500, TipoOpcaoOperacaoId: 4, TipoOpcaoPeriodoId: 1, investido: 12175.00,
                 strike: 23.43, premio: 0.30, taxas: 0, data_recompra: null, preco_recompra: 0, resultado: 0 },
+            { nome: 'BBAST194', TickerId: 22, TipoOpcaoStatusId: 1, data_abertura: '2025-08-04', data_vencimento: '2025-08-15', 
+                preco_aquisicao: 27.19, quantidade: 200, TipoOpcaoOperacaoId: 4, TipoOpcaoPeriodoId: 1, investido: 5438.00,
+                strike: 19.08, premio: 0.81, taxas: 0, data_recompra: null, preco_recompra: 0, resultado: 0 },
+            { nome: 'BOVAI136', TickerId: 44, TipoOpcaoStatusId: 1, data_abertura: '2025-08-04', data_vencimento: '2025-09-19', 
+                preco_aquisicao: 135.72, quantidade: 20, TipoOpcaoOperacaoId: 3, TipoOpcaoPeriodoId: 1, investido: 2714.40, 
+                strike: 136.00, premio: 1.18, taxas: 0.00 },
 
         ]);
 
@@ -346,6 +353,8 @@ async function insertInitialData() {
             { data: '2025-07-24', quantidade: 2, valor_unitario: 136.89, taxas: 0.08, TipoOperacaoId: 1, TickerId: 3, CarteiraId: 3 },
             { data: '2025-03-04', quantidade: 1, valor_unitario: 202.26, taxas: 0.00, TipoOperacaoId: 1, TickerId: 6, CarteiraId: 3 },
             { data: '2025-07-31', quantidade: 146, valor_unitario: 137.27, taxas: 6.01, TipoOperacaoId: 2, TickerId: 3, CarteiraId: 3 },
+            { data: '2025-08-04', quantidade: 180, valor_unitario: 109.38, taxas: 5.91, TipoOperacaoId: 1, TickerId: 45, CarteiraId: 3 },
+            { data: '2025-08-05', quantidade: 2, valor_unitario: 109.39, taxas: 0.07, TipoOperacaoId: 1, TickerId: 45, CarteiraId: 3 },
         ]);
 
         await Provento.bulkCreate([
