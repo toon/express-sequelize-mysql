@@ -30,6 +30,10 @@ const Opcao = sequelize.define('Opcao', {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
     },
+    strike_inicial: {
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: true,
+    },
     premio: {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
@@ -47,6 +51,16 @@ const Opcao = sequelize.define('Opcao', {
         allowNull: true,
     },
     preco_recompra: {
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: true,
+    },
+    // Indicar o preço do ativo no momento da compra da opção
+    preco_ativo_na_compra: {
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: true,
+    },
+    // Indicar o preço do ativo no momento da recompra ou exercício da opção    
+    preco_ativo_no_encerramento: {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: true,
     },

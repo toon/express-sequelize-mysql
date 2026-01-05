@@ -14,9 +14,17 @@ const Dashboard = sequelize.define('Dashboard', {
         type: DataTypes.DOUBLE,
         allowNull: true,
     },
+    preco_medio_historico: {
+        type: DataTypes.DOUBLE,
+        allowNull: true,
+    },
     investido: {
         type: DataTypes.DOUBLE,
         allowNull: false,
+    },
+    valor_investido: {
+        type: DataTypes.DOUBLE,
+        allowNull: true,
     },
     investido_real: {
         type: DataTypes.DOUBLE,

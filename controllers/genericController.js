@@ -39,7 +39,7 @@ const importCsv = async (req, res, model) => {
 // Função genérica para obter registros com associação, agregação e filtros dinâmicos via query params
 const getAllWithAggregations = (Model, aggregationField, aggregationType, filter) => async (req, res) => {
     try {
-        const { ativos } = req.query;  // 'ativos' será uma lista de códigos passada na query string
+        const { ativos, CarteiraId } = req.query;  // 'ativos' será uma lista de códigos passada na query string
         const listaAtivos = ativos ? ativos.split(',') : [];  // Converte a lista de ativos em array
         let where = {};
         
@@ -47,6 +47,11 @@ const getAllWithAggregations = (Model, aggregationField, aggregationType, filter
             where[filter] = {
                 [Op.in]: listaAtivos  // Aplica o filtro para múltiplos ativos
             };
+        }
+
+        //  Nova lógica: Se CarteiraId foi passado, adicionamos ao where
+        if (CarteiraId) {
+            where['CarteiraId'] = CarteiraId;
         }
 
         const agregacao = await Model.findAll({
@@ -57,6 +62,8 @@ const getAllWithAggregations = (Model, aggregationField, aggregationType, filter
             where,
             group: [filter]
         });
+
+        // console.log(agregacao);
 
         res.json(agregacao);
 

@@ -8,6 +8,7 @@ const Operacao = require('./Operacao');
 const TipoOperacao = require('./TipoOperacao');
 const TipoProvento = require('./TipoProvento');
 const TipoAtivo = require('./TipoAtivo');
+const TipoAtivoClassificacao = require('./TipoAtivoClassificacao');
 const Provento = require('./Provento');
 const Moeda = require('./Moeda');
 const Opcao = require('./Opcao');
@@ -16,6 +17,8 @@ const TipoOpcaoOperacao = require('./TipoOpcaoOperacao');
 const TipoOpcaoPeriodo = require('./TipoOpcaoPeriodo');
 const Dashboard = require('./Dashboard');
 const PosicaoAtivo = require('./PosicaoAtivo');
+const Investidor = require('./Investidor');
+const Corretora = require('./Corretora');
 // const User = require('./User');
 // const Post = require('./Post');
 // const Project = require('./Project');
@@ -43,6 +46,28 @@ Ticker.belongsToMany(Carteira, { through: 'CarteiraTicker' });
 
 Ticker.hasMany(PosicaoAtivo);
 PosicaoAtivo.belongsTo(Ticker)
+
+PosicaoAtivo.belongsTo(Carteira);
+Carteira.hasMany(PosicaoAtivo);
+
+
+//Associações com Investidor/Corretora e Operacoes
+Operacao.belongsTo(Investidor);
+Investidor.hasMany(Operacao);
+Operacao.belongsTo(Corretora);
+Corretora.hasMany(Operacao);
+
+//Associações com Investidor/Corretora e Proventos
+Provento.belongsTo(Investidor);
+Investidor.hasMany(Provento);
+Provento.belongsTo(Corretora);
+Corretora.hasMany(Provento);
+
+//Associações com Investidor/Corretora e Opcoes
+Opcao.belongsTo(Investidor);
+Investidor.hasMany(Opcao);
+Opcao.belongsTo(Corretora);
+Corretora.hasMany(Opcao);
 
 // Associações Operacao
 Operacao.belongsTo(PosicaoAtivo);
@@ -72,6 +97,9 @@ Ticker.hasMany(Dashboard);
 Ticker.belongsTo(TipoAtivo);
 TipoAtivo.hasMany(Ticker);
 
+Ticker.belongsTo(TipoAtivoClassificacao);
+TipoAtivoClassificacao.hasMany(Ticker);
+
 Ticker.belongsTo(Moeda);
 Moeda.hasMany(Ticker);
 
@@ -84,6 +112,7 @@ const models = {
     TipoOperacao,
     TipoProvento,
     TipoAtivo,
+    TipoAtivoClassificacao,
     Provento,
     Moeda,
     Opcao,
@@ -91,6 +120,8 @@ const models = {
     TipoOpcaoOperacao,
     TipoOpcaoPeriodo,
     PosicaoAtivo,
+    Investidor,
+    Corretora,
     Dashboard
  };
 
