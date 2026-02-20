@@ -69,6 +69,10 @@ Investidor.hasMany(Opcao);
 Opcao.belongsTo(Corretora);
 Corretora.hasMany(Opcao);
 
+// Auto-associação para Rolagem de Opções
+Opcao.belongsTo(Opcao, { as: 'OpcaoOriginal', foreignKey: 'rolagem_de_id' });
+Opcao.hasMany(Opcao, { as: 'Rolagens', foreignKey: 'rolagem_de_id' });
+
 // Associações Operacao
 Operacao.belongsTo(PosicaoAtivo);
 PosicaoAtivo.hasMany(Operacao)
