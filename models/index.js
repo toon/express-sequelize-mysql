@@ -9,6 +9,7 @@ const TipoOperacao = require('./TipoOperacao');
 const TipoProvento = require('./TipoProvento');
 const TipoAtivo = require('./TipoAtivo');
 const TipoAtivoClassificacao = require('./TipoAtivoClassificacao');
+const TipoAtivoAgrupamento = require('./TipoAtivoAgrupamento');
 const Provento = require('./Provento');
 const Moeda = require('./Moeda');
 const Opcao = require('./Opcao');
@@ -104,6 +105,9 @@ TipoAtivo.hasMany(Ticker);
 Ticker.belongsTo(TipoAtivoClassificacao);
 TipoAtivoClassificacao.hasMany(Ticker);
 
+Ticker.belongsTo(TipoAtivoAgrupamento);
+TipoAtivoAgrupamento.hasMany(Ticker);
+
 Ticker.belongsTo(Moeda);
 Moeda.hasMany(Ticker);
 
@@ -117,6 +121,7 @@ const models = {
     TipoProvento,
     TipoAtivo,
     TipoAtivoClassificacao,
+    TipoAtivoAgrupamento,
     Provento,
     Moeda,
     Opcao,
