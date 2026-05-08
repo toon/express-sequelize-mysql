@@ -360,6 +360,37 @@ const updateManyToManyRelation = async (req, res) => {
     }
 };
 
+const getLast = (Model) => async (req, res) => {
+    try {
+        const query = req.query; // Captura os parâmetros de query da requisição
+        let where = {};
+
+        // Para cada campo em query, adicionar uma condição no objeto where
+        Object.keys(query).forEach(key => {
+            if (Array.isArray(query[key])) {
+                // Se o valor for um array, usar o operador 'IN'
+                where[key] = { [Op.in]: query[key] };
+            } else {
+                // Busca exata (mantido o padrão da sua função getAllExactly)
+                where[key] = { [Op.like]: `${query[key]}` }; 
+            }
+        });
+
+        const item = await Model.findOne({
+            where, // Aplica os filtros dinâmicos construídos acima
+            order: [['id', 'DESC']], // Ordena pelo ID decrescente para pegar o último
+        });
+        
+        if (!item) {
+            return res.status(404).json({ message: 'Nenhum registro encontrado' });
+        }
+        
+        res.status(200).json(item);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
+
 module.exports = {
     create,
     getAll,
@@ -373,4 +404,5 @@ module.exports = {
     getAllExactly,
     importCsv,
     getAllWithSelectedAssociations,
+    getLast,
 };

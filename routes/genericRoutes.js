@@ -37,6 +37,7 @@ Object.keys(models).forEach((key) => {
   router.get(`/${key}se`, genericController.getAllwithAssociationsExactly(model));
   router.put(`/${key}/:id`, genericController.update(model));
   router.delete(`/${key}/:id`, genericController.remove(model));
+  router.get(`/${key}/last`, genericController.getLast(model));
   
 });
 

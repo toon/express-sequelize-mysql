@@ -13,6 +13,8 @@ const TipoAtivoAgrupamento = require('./TipoAtivoAgrupamento');
 const Provento = require('./Provento');
 const Moeda = require('./Moeda');
 const Opcao = require('./Opcao');
+const TipoOperacaoTaxa = require('./TipoOperacaoTaxa');
+const OperacaoTaxaStatus = require('./OperacaoTaxaStatus');
 const TipoOpcaoStatus = require('./TipoOpcaoStatus');
 const TipoOpcaoOperacao = require('./TipoOpcaoOperacao');
 const TipoOpcaoPeriodo = require('./TipoOpcaoPeriodo');
@@ -20,9 +22,11 @@ const Dashboard = require('./Dashboard');
 const PosicaoAtivo = require('./PosicaoAtivo');
 const Investidor = require('./Investidor');
 const Corretora = require('./Corretora');
+const CaixaOperacaoTaxa = require('./CaixaOperacaoTaxa');
 // const User = require('./User');
 // const Post = require('./Post');
 // const Project = require('./Project');
+
 
 // Defina associações (1:N)
 // User.hasMany(Post);
@@ -111,6 +115,18 @@ TipoAtivoAgrupamento.hasMany(Ticker);
 Ticker.belongsTo(Moeda);
 Moeda.hasMany(Ticker);
 
+TipoOperacaoTaxa.belongsTo(OperacaoTaxaStatus);
+OperacaoTaxaStatus.hasMany(TipoOperacaoTaxa);
+
+TipoOperacaoTaxa.belongsTo(Ticker);
+Ticker.hasMany(TipoOperacaoTaxa);
+
+Opcao.belongsTo(TipoOperacaoTaxa);
+TipoOperacaoTaxa.hasMany(Opcao);
+
+CaixaOperacaoTaxa.belongsTo(TipoOperacaoTaxa);
+TipoOperacaoTaxa.hasMany(CaixaOperacaoTaxa);
+
 const models = { 
     ParMoeda, 
     Estrategia, 
@@ -125,12 +141,15 @@ const models = {
     Provento,
     Moeda,
     Opcao,
+    TipoOperacaoTaxa,
+    OperacaoTaxaStatus,
     TipoOpcaoStatus,
     TipoOpcaoOperacao,
     TipoOpcaoPeriodo,
     PosicaoAtivo,
     Investidor,
     Corretora,
+    CaixaOperacaoTaxa,
     Dashboard
  };
 
