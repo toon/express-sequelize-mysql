@@ -391,6 +391,59 @@ const getLast = (Model) => async (req, res) => {
     }
 };
 
+const getLastByGroup = (Model) => async (req, res) => {
+    try {
+        const {
+            groupBy = 'TickerId',
+            orderBy = 'id',
+            orderDirection = 'DESC',
+            ...filters
+        } = req.query;
+
+        let where = {};
+
+        Object.keys(filters).forEach(key => {
+            const value = filters[key];
+
+            if (Array.isArray(value)) {
+                where[key] = { [Op.in]: value };
+            } else {
+                where[key] = { [Op.like]: `${value}` };
+            }
+        });
+
+        const latestRows = await Model.findAll({
+            attributes: [
+                groupBy,
+                [fn('MAX', col(orderBy)), 'lastId']
+            ],
+            where,
+            group: [groupBy],
+            raw: true
+        });
+
+        const ids = latestRows
+            .map(row => row.lastId)
+            .filter(Boolean);
+
+        const items = ids.length
+            ? await Model.findAll({
+                where: {
+                    [orderBy]: { [Op.in]: ids }
+                },
+                order: [
+                    [groupBy, 'ASC'],
+                    [orderBy, orderDirection]
+                ]
+            })
+            : [];
+
+        res.status(200).json(items);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
+
 module.exports = {
     create,
     getAll,
@@ -405,4 +458,5 @@ module.exports = {
     importCsv,
     getAllWithSelectedAssociations,
     getLast,
+    getLastByGroup,
 };

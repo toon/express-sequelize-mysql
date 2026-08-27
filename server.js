@@ -683,25 +683,46 @@ async function insertInitialData() {
                 TipoOperacaoTaxaId: OPERACAO_TAXA.BPAC11, rolagem_de_id: 48,
             },
 
-            { nome: 'BPACH525', TickerId: TICKER.BPAC11, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.EM_ANDAMENTO, data_abertura: '2026-07-15', data_vencimento: '2026-08-21', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
+            { nome: 'BPACH525', TickerId: TICKER.BPAC11, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.ENCERRADA, data_abertura: '2026-07-15', data_vencimento: '2026-08-21', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
                 preco_aquisicao: 57.67, quantidade: 100, TipoOpcaoOperacaoId: TIPO_OPCAO_OPERACAO.VC, TipoOpcaoPeriodoId: TIPO_OPCAO_PERIODO.MENSAL, investido: 5767.00,
-                strike: 52.52, premio: 6.30, taxas: 1.07, data_recompra: null, preco_recompra: 0, resultado: 0,
-                preco_ativo_na_compra: 57.67, preco_ativo_no_encerramento: 0,
+                strike_inicial: 52.52, strike: 51.88, premio: 6.30, taxas: 1.07, data_recompra: '2026-08-21', preco_recompra: '0.43', resultado: 595.75,
+                preco_ativo_na_compra: 57.67, preco_ativo_no_encerramento: 51.87,
                 TipoOperacaoTaxaId: OPERACAO_TAXA.BPAC11, rolagem_de_id: 53,
             },
 
-            { nome: 'CYRET238', TickerId: TICKER.CYRE3, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.EM_ANDAMENTO, data_abertura: '2026-07-16', data_vencimento: '2026-08-21', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
+            { nome: 'CYRET238', TickerId: TICKER.CYRE3, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.ENCERRADA, data_abertura: '2026-07-16', data_vencimento: '2026-08-21', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
                 preco_aquisicao: 22.16, quantidade: 400, TipoOpcaoOperacaoId: TIPO_OPCAO_OPERACAO.VP, TipoOpcaoPeriodoId: TIPO_OPCAO_PERIODO.MENSAL, investido: 8864.00,
-                strike: 23.95, premio: 1.97, taxas: 1.09, data_recompra: null, preco_recompra: 0, resultado: 0,
-                preco_ativo_na_compra: 22.16, preco_ativo_no_encerramento: 0,
+                strike: 23.95, premio: 1.97, taxas: 1.09, data_recompra: '2026-08-20', preco_recompra: 1.90, resultado: 26.91,
+                preco_ativo_na_compra: 22.16, preco_ativo_no_encerramento: 22.02,
                 rolagem_de_id: 52,
             },
 
-            { nome: 'SMALT110', TickerId: TICKER.SMAL11, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.EM_ANDAMENTO, data_abertura: '2026-07-16', data_vencimento: '2026-08-21', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
+            { nome: 'SMALT110', TickerId: TICKER.SMAL11, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.ENCERRADA, data_abertura: '2026-07-16', data_vencimento: '2026-08-21', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
                 preco_aquisicao: 108.95, quantidade: 63, TipoOpcaoOperacaoId: TIPO_OPCAO_OPERACAO.VP, TipoOpcaoPeriodoId: TIPO_OPCAO_PERIODO.MENSAL, investido: 6863.85,
-                strike: 110.00, premio: 3.45, taxas: 0.20, data_recompra: null, preco_recompra: 0, resultado: 0,
-                preco_ativo_na_compra: 108.95, preco_ativo_no_encerramento: 0,
+                strike: 110.00, premio: 3.45, taxas: 0.20, data_recompra: '2026-08-21', preco_recompra: 8.40, resultado: -312.05,
+                preco_ativo_na_compra: 108.95, preco_ativo_no_encerramento: 101.25,
                 rolagem_de_id: 51,
+            },
+
+            { nome: 'CYREU237', TickerId: TICKER.CYRE3, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.EM_ANDAMENTO, data_abertura: '2026-08-20', data_vencimento: '2026-09-18', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
+                preco_aquisicao: 22.02, quantidade: 400, TipoOpcaoOperacaoId: TIPO_OPCAO_OPERACAO.VP, TipoOpcaoPeriodoId: TIPO_OPCAO_PERIODO.MENSAL, investido: 8808.00,
+                strike: 23.75, premio: 1.98, taxas: 1.09, data_recompra: null, preco_recompra: 0, resultado: 0,
+                preco_ativo_na_compra: 22.02, preco_ativo_no_encerramento: 0,
+                rolagem_de_id: 55,
+            },
+
+            { nome: 'BPACI479', TickerId: TICKER.BPAC11, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.EM_ANDAMENTO, data_abertura: '2026-08-21', data_vencimento: '2026-09-18', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
+                preco_aquisicao: 51.91, quantidade: 100, TipoOpcaoOperacaoId: TIPO_OPCAO_OPERACAO.VC, TipoOpcaoPeriodoId: TIPO_OPCAO_PERIODO.MENSAL, investido: 5767.00,
+                strike: 47.30, premio: 5.40, taxas: 1.07, data_recompra: null, preco_recompra: 0, resultado: 0,
+                preco_ativo_na_compra: 51.91, preco_ativo_no_encerramento: 0,
+                TipoOperacaoTaxaId: OPERACAO_TAXA.BPAC11, rolagem_de_id: 54,
+            },
+
+            { nome: 'SMALU110', TickerId: TICKER.SMAL11, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.EM_ANDAMENTO, data_abertura: '2026-08-21', data_vencimento: '2026-09-18', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
+                preco_aquisicao: 101.46, quantidade: 63, TipoOpcaoOperacaoId: TIPO_OPCAO_OPERACAO.VP, TipoOpcaoPeriodoId: TIPO_OPCAO_PERIODO.MENSAL, investido: 6391.98,
+                strike: 110.00, premio: 8.40, taxas: 0.20, data_recompra: null, preco_recompra: 0, resultado: 0,
+                preco_ativo_na_compra: 101.46, preco_ativo_no_encerramento: 0,
+                rolagem_de_id: 56,
             },
 
 
@@ -834,6 +855,8 @@ async function insertInitialData() {
             { TickerId: TICKER.ISAE4, data_abertura: '2026-05-08', data_fechamento: null, CarteiraId: CARTEIRA.MAGAR_BRASIL }, // 84 - CRIS
             { TickerId: TICKER.USDB11, data_abertura: '2026-05-08', data_fechamento: null, CarteiraId: CARTEIRA.MAGAR_BRASIL }, // 85 - CRIS
             { TickerId: TICKER.GOLD11, data_abertura: '2026-08-06', data_fechamento: null, CarteiraId: CARTEIRA.MAGAR_BRASIL }, // 86 - CRIS
+            { TickerId: TICKER.CSMG3, data_abertura: '2026-08-25', data_fechamento: null, CarteiraId: CARTEIRA.MAGAR_BRASIL }, // 87 - CRIS
+            { TickerId: TICKER.CSMG3, data_abertura: '2026-08-25', data_fechamento: null, CarteiraId: CARTEIRA.MAGAR_BRASIL }, // 88 - IGOR
 
         ]);
 
@@ -966,6 +989,9 @@ async function insertInitialData() {
             { data: '2025-07-01', quantidade: 700, valor_unitario: 27.95, taxas: 5.87, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.CSMG3, CarteiraId: CARTEIRA.MAGAR_BRASIL, PosicaoAtivoId: 9, InvestidorId: INVESTIDOR.CRIS, CorretoraId: CORRETORA.BTG },
             { data: '2025-08-29', quantidade: 600, valor_unitario: 30.19, taxas: 5.43, TipoOperacaoId: TIPO_OPERACAO.VENDA, TickerId: TICKER.CSMG3, CarteiraId: CARTEIRA.MAGAR_BRASIL, PosicaoAtivoId: 9, InvestidorId: INVESTIDOR.CRIS, CorretoraId: CORRETORA.BTG },
             { data: '2025-09-25', quantidade: 200, valor_unitario: 33.57, taxas: 2.01, TipoOperacaoId: TIPO_OPERACAO.VENDA, TickerId: TICKER.CSMG3, CarteiraId: CARTEIRA.MAGAR_BRASIL, PosicaoAtivoId: 9, InvestidorId: INVESTIDOR.CRIS, CorretoraId: CORRETORA.BTG },
+
+            { data: '2026-08-25', quantidade: 120, valor_unitario: 55.09, taxas: 1.98, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.CSMG3, CarteiraId: CARTEIRA.MAGAR_BRASIL, PosicaoAtivoId: 87, InvestidorId: INVESTIDOR.CRIS, CorretoraId: CORRETORA.BTG },
+            { data: '2026-08-25', quantidade: 100, valor_unitario: 55.33, taxas: 1.66, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.CSMG3, CarteiraId: CARTEIRA.MAGAR_BRASIL, PosicaoAtivoId: 88, InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG },
             //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
             { data: '2024-05-24', quantidade: 200, valor_unitario: 13.58, taxas: 0.80, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: 11, CarteiraId: CARTEIRA.DIVERSAS, PosicaoAtivoId: 30, InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.INTER },
@@ -1254,6 +1280,7 @@ async function insertInitialData() {
             { data: '2026-05-15', valor_unitario: 0.17, total: 97.95, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HGBS11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-06-15', valor_unitario: 0.17, total: 97.95, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HGBS11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-07-14', valor_unitario: 0.17, total: 97.95, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HGBS11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-08-14', valor_unitario: 0.17, total: 97.95, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HGBS11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
 
             //BTAL11
             { data: '2024-04-24', valor_unitario: 0.65, total: 87.10, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.BTAL11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
@@ -1313,6 +1340,7 @@ async function insertInitialData() {
             { data: '2026-04-15', valor_unitario: 0.84, total: 89.88, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.VISC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-06-15', valor_unitario: 0.84, total: 89.88, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.VISC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-07-14', valor_unitario: 0.84, total: 89.88, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.VISC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-08-14', valor_unitario: 0.84, total: 89.88, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.VISC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
 
             //RZTR11
             { data: '2024-05-04', valor_unitario: 0.90, total: 90.90, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.RZTR11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
@@ -1436,6 +1464,7 @@ async function insertInitialData() {
             { data: '2026-05-25', valor_unitario: 0.81, total: 87.48, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.BTLG11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-06-25', valor_unitario: 0.81, total: 87.48, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.BTLG11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-07-24', valor_unitario: 0.81, total: 87.48, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.BTLG11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-08-25', valor_unitario: 0.81, total: 87.48, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.BTLG11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
 
             { data: '2025-02-13', valor_unitario: 0.17, total: 0.17, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.AAPL, CarteiraId: CARTEIRA.DIVERSAS },
 
@@ -1533,6 +1562,8 @@ async function insertInitialData() {
             { data: '2026-01-16', valor_unitario: 0.35, total: 216.30, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CXSE3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-01-16', valor_unitario: 0.00, total: 1.02, TipoProventoId: TIPO_PROVENTO.RENDIMENTOS, TickerId: TICKER.CXSE3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-05-15', valor_unitario: 0.33, total: 258.06, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CXSE3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-05-15', valor_unitario: 0.26, total: 203.94, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CXSE3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-08-17', valor_unitario: 0.35, total: 273.70, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CXSE3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
 
             //CYRE3
             { data: '2024-11-26', valor_unitario: 0.60, total: 238.71, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CYRE3, CarteiraId: CARTEIRA.MAGAR_BRASIL },

@@ -38,6 +38,7 @@ Object.keys(models).forEach((key) => {
   router.put(`/${key}/:id`, genericController.update(model));
   router.delete(`/${key}/:id`, genericController.remove(model));
   router.get(`/${key}/last`, genericController.getLast(model));
+  router.get(`/${key}/last-by-group`, genericController.getLastByGroup(model));
   
 });
 
