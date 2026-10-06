@@ -22,6 +22,13 @@ const Operacao = sequelize.define('Operacao', {
         type: DataTypes.DOUBLE,
         allowNull: false,
     },
+    // Campo "operacao_ir" para indicar se a operação de venda de ações dentro do limite de 20K por mês e compra no dias ou dias seguintes.
+    operacao_ir: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
+    },
+
 }, {
     timestamps: true,
     tableName: 'operacaos'
