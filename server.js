@@ -262,6 +262,7 @@ await sleep(300);
             { nome: 'GOLD11.SA', descricao: 'TREND ETF LBMA OURO FDO. INV. ÍNDICE - INVEST. EXT', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ETF, MoedaId: MOEDA.BRL, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.OURO },
             { nome: 'USDB11.SA', descricao: 'INVESTO BLOOMBERG US BOND ETF FDO INV IND IE', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ETF, MoedaId: MOEDA.BRL, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.DOLAR },
             { nome: 'AVGO', descricao: 'Broadcom Inc.', ativo: 'true', TipoAtivoId: TIPO_ATIVO.STOCK, MoedaId: MOEDA.USD, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.RENDA_VARIAVEL_USA },
+            { nome: 'VAMO3.SA', descricao: 'Vamos Locacao De Caminhoes Maquinas E Equipamentos SA', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ACAO, MoedaId: MOEDA.BRL, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.ACAO_BR },
 
         ]);
 
@@ -322,6 +323,7 @@ await sleep(300);
             GOLD11: 53,
             USDB11: 54,
             AVGO: 55,
+            VAMO3: 56,
         };
 
         await Carteira.bulkCreate([
@@ -890,6 +892,7 @@ await sleep(300);
             { TickerId: TICKER.CSMG3, data_abertura: '2026-08-25', data_fechamento: null, CarteiraId: CARTEIRA.MAGAR_BRASIL }, // 88 - IGOR
             { TickerId: TICKER.GOLD11, data_abertura: '2026-10-01', data_fechamento: null, CarteiraId: CARTEIRA.MAGAR_USA }, // 89 - CRIS
             { TickerId: TICKER.AVGO, data_abertura: '2026-10-06', data_fechamento: null, CarteiraId: CARTEIRA.DIVERSAS }, // 90 - IGOR
+            { TickerId: TICKER.VAMO3, data_abertura: '2025-05-05', data_fechamento: null, CarteiraId: CARTEIRA.DIVERSAS }, // 91 - IGOR
 
         ]);
 
@@ -897,6 +900,11 @@ await sleep(300);
 
         await Operacao.bulkCreate([
 
+            { data: '2025-05-05', quantidade: 200, valor_unitario: 4.88, taxas: 0.67, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.VAMO3, CarteiraId: CARTEIRA.DIVERSAS, PosicaoAtivoId: 91, InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.INTER },
+            { data: '2025-07-01', quantidade: 100, valor_unitario: 4.10, taxas: 0.31, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.VAMO3, CarteiraId: CARTEIRA.DIVERSAS, PosicaoAtivoId: 91, InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.INTER },
+            { data: '2025-07-02', quantidade: 100, valor_unitario: 4.02, taxas: 0.31, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.VAMO3, CarteiraId: CARTEIRA.DIVERSAS, PosicaoAtivoId: 91, InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.INTER },
+            { data: '2025-08-11', quantidade: 300, valor_unitario: 3.96, taxas: 0.92, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.VAMO3, CarteiraId: CARTEIRA.DIVERSAS, PosicaoAtivoId: 91, InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.INTER },
+            
             { data: '2026-10-06', quantidade: 0.13344025, valor_unitario: 375.60, taxas: 0, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.AVGO, CarteiraId: CARTEIRA.DIVERSAS, PosicaoAtivoId: 90, InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.INTER },
 
             { data: '2026-03-26', quantidade: 100, valor_unitario: 55.11, taxas: 1.64, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.BPAC11, CarteiraId: CARTEIRA.DIVERSAS, PosicaoAtivoId: 78, InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG },
