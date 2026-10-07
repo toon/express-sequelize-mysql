@@ -3,6 +3,8 @@
 const express = require('express');
 const cors = require('cors');
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 const { sequelize, 
     // ParMoeda, 
     // Estrategia, 
