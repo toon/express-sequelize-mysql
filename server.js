@@ -4,8 +4,8 @@ const express = require('express');
 const cors = require('cors');
 
 const { sequelize, 
-    ParMoeda, 
-    Estrategia, 
+    // ParMoeda, 
+    // Estrategia, 
     Ticker, 
     Carteira, 
     TipoOperacao, 
@@ -96,21 +96,23 @@ async function insertInitialData() {
             VP: 4, // Venda de PUT
         };
         
-        await ParMoeda.bulkCreate([
-            { nome: 'BTCUSDT', ativo: 'true' },
-            { nome: 'ETCUSDT', ativo: 'true' },
-            { nome: 'BATUSDT', ativo: 'false' },
-        ]);
-        const aaveusdt = await ParMoeda.create({ nome: 'AAVEUSDT', ativo: 'true' });
-        const btcusdt = await ParMoeda.findOne();
-        await Estrategia.bulkCreate([
-            { nome: 'Pullback de baixa 3 2 3', descricao: 'Compra quando cai 3%, vende quando sobe 2% ou cai mais 3%', ativo: 'true' },
-            { nome: 'Pullback de baixa 2 1.5 3', descricao: 'Compra quando cai 2%, vende quando sobe 1.5% ou cai mais 3%', ativo: 'true' },
-        ]);
-        const estrategia = await Estrategia.create({ nome: 'Pullback de baixa 1.5 1.2 1.1', descricao: 'Compra quando cai 1.5%, vende quando sobe 1.2% ou cai mais 1.1%', ativo: 'true' });
+await sleep(300);
 
-        estrategia.addParMoeda(aaveusdt);
-        estrategia.addParMoeda(btcusdt);
+        // await ParMoeda.bulkCreate([
+        //     { nome: 'BTCUSDT', ativo: 'true' },
+        //     { nome: 'ETCUSDT', ativo: 'true' },
+        //     { nome: 'BATUSDT', ativo: 'false' },
+        // ]);
+        // const aaveusdt = await ParMoeda.create({ nome: 'AAVEUSDT', ativo: 'true' });
+        // const btcusdt = await ParMoeda.findOne();
+        // await Estrategia.bulkCreate([
+        //     { nome: 'Pullback de baixa 3 2 3', descricao: 'Compra quando cai 3%, vende quando sobe 2% ou cai mais 3%', ativo: 'true' },
+        //     { nome: 'Pullback de baixa 2 1.5 3', descricao: 'Compra quando cai 2%, vende quando sobe 1.5% ou cai mais 3%', ativo: 'true' },
+        // ]);
+        // const estrategia = await Estrategia.create({ nome: 'Pullback de baixa 1.5 1.2 1.1', descricao: 'Compra quando cai 1.5%, vende quando sobe 1.2% ou cai mais 1.1%', ativo: 'true' });
+
+        // estrategia.addParMoeda(aaveusdt);
+        // estrategia.addParMoeda(btcusdt);
         
         await Moeda.bulkCreate([
             { nome: 'R$', descricao: 'Real Brasileiro', ativo: 'true' },
@@ -145,6 +147,8 @@ async function insertInitialData() {
             IGOR: 1,
             CRIS: 2
         };
+
+await sleep(300);
 
         await TipoAtivo.bulkCreate([
             { nome: 'Ações', ativo: 'true' },
@@ -197,6 +201,8 @@ async function insertInitialData() {
             CRIPTO: 7,
             
         };
+
+await sleep(300);
 
         await Ticker.bulkCreate([
             { nome: 'ISAE4.SA', descricao: 'ISA ENERGIA BRASIL S.A', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ACAO, MoedaId: MOEDA.BRL, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.ACAO_BR },
@@ -329,6 +335,8 @@ async function insertInitialData() {
             ACOES_CRIS: 4
         };
 
+await sleep(300);
+
         await TipoOperacao.bulkCreate([
             { nome: 'Compra', ativo: 'true' },
             { nome: 'Venda', ativo: 'true' },
@@ -371,6 +379,8 @@ async function insertInitialData() {
             BPAC11: 1,
         }
 
+await sleep(300);
+
         await CaixaOperacaoTaxa.bulkCreate([
 
             {
@@ -411,6 +421,7 @@ async function insertInitialData() {
 
         ]);
 
+await sleep(300);
 
         await Opcao.bulkCreate([
             { nome: 'BOVAF138W4', TickerId: TICKER.BOVA11, TipoOpcaoStatusId: 4, data_abertura: '2025-06-18', data_vencimento: '2025-06-27', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.CM,
@@ -742,6 +753,8 @@ async function insertInitialData() {
 
             ]);
 
+await sleep(300);
+
         // Não é possível usar bulkCreate para vários causa do ID composto
         await PosicaoAtivo.bulkCreate([
             { TickerId: TICKER.SGOV, data_abertura: '2024-03-19', CarteiraId: CARTEIRA.MAGAR_BRASIL }, // 1
@@ -874,6 +887,8 @@ async function insertInitialData() {
             { TickerId: TICKER.GOLD11, data_abertura: '2026-10-01', data_fechamento: null, CarteiraId: CARTEIRA.MAGAR_USA }, // 89 - CRIS
 
         ]);
+
+await sleep(300);        
 
         await Operacao.bulkCreate([
 
@@ -1288,6 +1303,8 @@ async function insertInitialData() {
 
 
         ]);
+
+await sleep(300);
 
         await Provento.bulkCreate([
             //HGBS11
