@@ -900,6 +900,8 @@ await sleep(300);
 
         await Operacao.bulkCreate([
 
+            // Se for operação de IR, ou seja, venda de ativo e compra em outro dia, incluir no registro "operacao_ir: true"
+            
             { data: '2025-05-05', quantidade: 200, valor_unitario: 4.88, taxas: 0.67, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.VAMO3, CarteiraId: CARTEIRA.DIVERSAS, PosicaoAtivoId: 91, InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.INTER },
             { data: '2025-07-01', quantidade: 100, valor_unitario: 4.10, taxas: 0.31, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.VAMO3, CarteiraId: CARTEIRA.DIVERSAS, PosicaoAtivoId: 91, InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.INTER },
             { data: '2025-07-02', quantidade: 100, valor_unitario: 4.02, taxas: 0.31, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.VAMO3, CarteiraId: CARTEIRA.DIVERSAS, PosicaoAtivoId: 91, InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.INTER },
@@ -1481,7 +1483,7 @@ await sleep(300);
             { data: '2026-07-07', valor_unitario: 0.75, total: 132.75, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HSML11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-08-07', valor_unitario: 0.75, total: 132.75, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HSML11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-09-08', valor_unitario: 0.75, total: 132.75, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HSML11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
-            { data: '2026-09-08', valor_unitario: 0.75, total: 145.50, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HSML11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-10-07', valor_unitario: 0.75, total: 145.50, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HSML11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
 
             //GGRC11
             { data: '2024-04-08', valor_unitario: 0.09, total: 75.96, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.GGRC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
@@ -1514,6 +1516,7 @@ await sleep(300);
             { data: '2026-07-10', valor_unitario: 0.10, total: 184.40, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.GGRC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-08-10', valor_unitario: 0.10, total: 211.70, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.GGRC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-09-09', valor_unitario: 0.10, total: 211.70, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.GGRC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-10-08', valor_unitario: 0.10, total: 241.70, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.GGRC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
 
             //BTLG11
             { data: '2024-04-25', valor_unitario: 0.76, total: 69.92, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.BTLG11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
