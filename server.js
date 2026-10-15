@@ -742,10 +742,10 @@ await sleep(300);
                 rolagem_de_id: 56,
             },
 
-            { nome: 'BPACJ512', TickerId: TICKER.BPAC11, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.EM_ANDAMENTO, data_abertura: '2026-09-14', data_vencimento: '2026-10-16', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
+            { nome: 'BPACJ512', TickerId: TICKER.BPAC11, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.ENCERRADA, data_abertura: '2026-09-14', data_vencimento: '2026-10-16', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
                 preco_aquisicao: 59.86, quantidade: 100, TipoOpcaoOperacaoId: TIPO_OPCAO_OPERACAO.VC, TipoOpcaoPeriodoId: TIPO_OPCAO_PERIODO.MENSAL, investido: 5986.00,
-                strike: 50.02, premio: 10.66, taxas: 1.56, data_recompra: null, preco_recompra: 0, resultado: 0,
-                preco_ativo_na_compra: 59.86, preco_ativo_no_encerramento: 0,
+                strike: 50.02, premio: 10.66, taxas: 4.41, data_recompra: '2026-10-15', preco_recompra: 26.92, resultado: -1627.56,
+                preco_ativo_na_compra: 59.86, preco_ativo_no_encerramento: 77.00,
                 TipoOperacaoTaxaId: OPERACAO_TAXA.BPAC11, rolagem_de_id: 58,
             },
 
@@ -754,6 +754,13 @@ await sleep(300);
                 strike: 110.00, premio: 4.33, taxas: 0.22, data_recompra: null, preco_recompra: 0, resultado: 0,
                 preco_ativo_na_compra: 109.42, preco_ativo_no_encerramento: 0,
                 rolagem_de_id: 59,
+            },
+
+            { nome: 'BPACK635', TickerId: TICKER.BPAC11, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.EM_ANDAMENTO, data_abertura: '2026-10-15', data_vencimento: '2026-11-19', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
+                preco_aquisicao: 77.00, quantidade: 100, TipoOpcaoOperacaoId: TIPO_OPCAO_OPERACAO.VC, TipoOpcaoPeriodoId: TIPO_OPCAO_PERIODO.MENSAL, investido: 7700.00,
+                strike: 63.55, premio: 15.70, taxas: 2.85, data_recompra: null, preco_recompra: 0, resultado: 0,
+                preco_ativo_na_compra: 77.00, preco_ativo_no_encerramento: 0,
+                TipoOperacaoTaxaId: OPERACAO_TAXA.BPAC11, rolagem_de_id: 60,
             },
 
 
@@ -1355,6 +1362,7 @@ await sleep(300);
             { data: '2026-07-14', valor_unitario: 0.17, total: 97.95, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HGBS11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-08-14', valor_unitario: 0.17, total: 97.95, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HGBS11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-09-15', valor_unitario: 0.17, total: 97.95, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HGBS11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-10-15', valor_unitario: 0.17, total: 97.95, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HGBS11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             
             //BTAL11
             { data: '2024-04-24', valor_unitario: 0.65, total: 87.10, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.BTAL11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
@@ -1419,6 +1427,7 @@ await sleep(300);
             { data: '2026-07-14', valor_unitario: 0.84, total: 89.88, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.VISC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-08-14', valor_unitario: 0.84, total: 89.88, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.VISC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-09-15', valor_unitario: 0.84, total: 89.88, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.VISC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-10-15', valor_unitario: 0.84, total: 89.88, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.VISC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
 
             //RZTR11
             { data: '2024-04-05', valor_unitario: 0.90, total: 90.90, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.RZTR11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
