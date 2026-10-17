@@ -487,7 +487,7 @@ await sleep(300);
                 strike: 11.08, premio: 0.24, taxas: 0.28, data_recompra: '2025-09-17', preco_recompra: 0.02, resultado: 132.00 },
 
             { nome: 'BBASU215W2', TickerId: TICKER.BBAS3, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.VIROU_PO, data_abertura: '2025-08-29', data_vencimento: '2025-09-12', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.CM,
-                preco_aquisicao: 27.19, quantidade: 200, TipoOpcaoOperacaoId: TIPO_OPCAO_OPERACAO.CP, TipoOpcaoPeriodoId: TIPO_OPCAO_PERIODO.SEMANAL, investido: 5438.00,
+                preco_aquisicao: 27.19, quantidade: 200, TipoOpcaoOperacaoId: TIPO_OPCAO_OPERACAO.CP, TipoOpcaoPeriodoId: TIPO_OPCAO_PERIODO.SEMANAL, investido: 112.00,
                 strike: 21.50, premio: 0.56, taxas: 0.14, data_recompra: null, preco_recompra: 0, resultado: -112.00 },
 
             { nome: 'ITSAU114', TickerId: TICKER.ITSA4, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.ENCERRADA, data_abertura: '2025-09-01', data_vencimento: '2025-09-19', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.CM,
@@ -749,10 +749,10 @@ await sleep(300);
                 TipoOperacaoTaxaId: OPERACAO_TAXA.BPAC11, rolagem_de_id: 58,
             },
 
-            { nome: 'SMALV110', TickerId: TICKER.SMAL11, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.EM_ANDAMENTO, data_abertura: '2026-09-17', data_vencimento: '2026-10-16', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
+            { nome: 'SMALV110', TickerId: TICKER.SMAL11, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.VIROU_PO, data_abertura: '2026-09-17', data_vencimento: '2026-10-16', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
                 preco_aquisicao: 109.42, quantidade: 63, TipoOpcaoOperacaoId: TIPO_OPCAO_OPERACAO.VP, TipoOpcaoPeriodoId: TIPO_OPCAO_PERIODO.MENSAL, investido: 6893.46,
-                strike: 110.00, premio: 4.33, taxas: 0.22, data_recompra: null, preco_recompra: 0, resultado: 0,
-                preco_ativo_na_compra: 109.42, preco_ativo_no_encerramento: 0,
+                strike: 110.00, premio: 4.33, taxas: 0.22, data_recompra: null, preco_recompra: 0, resultado: 272.57,
+                preco_ativo_na_compra: 109.42, preco_ativo_no_encerramento: 131.00,
                 rolagem_de_id: 59,
             },
 
