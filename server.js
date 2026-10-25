@@ -1559,6 +1559,7 @@ await sleep(300);
             { data: '2026-07-24', valor_unitario: 0.81, total: 87.48, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.BTLG11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-08-25', valor_unitario: 0.81, total: 87.48, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.BTLG11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-09-25', valor_unitario: 0.81, total: 87.48, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.BTLG11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-10-23', valor_unitario: 0.81, total: 87.48, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.BTLG11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
 
             { data: '2025-02-13', valor_unitario: 0.17, total: 0.17, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.AAPL, CarteiraId: CARTEIRA.MAGAR_USA },
 
@@ -1878,6 +1879,8 @@ await sleep(300);
             { data: '2026-09-25', valor_unitario: 0.20, total: 0.94, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CONY, CarteiraId: CARTEIRA.DIVERSAS },
             { data: '2026-10-02', valor_unitario: 0.18, total: 0.87, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CONY, CarteiraId: CARTEIRA.DIVERSAS },
             { data: '2026-10-09', valor_unitario: 0.16, total: 0.75, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CONY, CarteiraId: CARTEIRA.DIVERSAS },
+            { data: '2026-10-16', valor_unitario: 0.15, total: 0.72, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CONY, CarteiraId: CARTEIRA.DIVERSAS },
+            { data: '2026-10-23', valor_unitario: 0.14, total: 0.65, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CONY, CarteiraId: CARTEIRA.DIVERSAS },
 
             //ISAE4
             { data: '2025-01-21', valor_unitario: 0.72, total: 257.53, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.ISAE4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
