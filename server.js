@@ -897,7 +897,6 @@ await sleep(300);
             { TickerId: TICKER.GOLD11, data_abertura: '2026-08-06', data_fechamento: null, CarteiraId: CARTEIRA.MAGAR_BRASIL }, // 86 - CRIS
             { TickerId: TICKER.CSMG3, data_abertura: '2026-08-25', data_fechamento: null, CarteiraId: CARTEIRA.MAGAR_BRASIL }, // 87 - CRIS
             { TickerId: TICKER.CSMG3, data_abertura: '2026-08-25', data_fechamento: null, CarteiraId: CARTEIRA.MAGAR_BRASIL }, // 88 - IGOR
-            // { TickerId: TICKER.GOLD11, data_abertura: '2026-10-01', data_fechamento: null, CarteiraId: CARTEIRA.MAGAR_USA }, // 89 - NÃO USADO
             { TickerId: TICKER.AVGO, data_abertura: '2026-10-06', data_fechamento: null, CarteiraId: CARTEIRA.DIVERSAS }, // 89 - IGOR
             { TickerId: TICKER.VAMO3, data_abertura: '2025-05-05', data_fechamento: null, CarteiraId: CARTEIRA.DIVERSAS }, // 90 - IGOR
 
@@ -929,7 +928,7 @@ await sleep(300);
             { data: '2026-08-06', quantidade: 310, valor_unitario: 22.50, taxas: 2.09, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.GOLD11, CarteiraId: CARTEIRA.MAGAR_BRASIL, PosicaoAtivoId: 81, InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG },
             { data: '2026-08-06', quantidade: 200, valor_unitario: 22.53, taxas: 1.35, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.GOLD11, CarteiraId: CARTEIRA.MAGAR_BRASIL, PosicaoAtivoId: 86, InvestidorId: INVESTIDOR.CRIS, CorretoraId: CORRETORA.BTG },
             { data: '2026-08-06', quantidade: 200, valor_unitario: 22.53, taxas: 1.35, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.GOLD11, CarteiraId: CARTEIRA.MAGAR_BRASIL, PosicaoAtivoId: 86, InvestidorId: INVESTIDOR.CRIS, CorretoraId: CORRETORA.BTG },
-            { data: '2026-10-01', quantidade: 500, valor_unitario: 22.54, taxas: 3.38, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.GOLD11, CarteiraId: CARTEIRA.MAGAR_USA, PosicaoAtivoId: 86, InvestidorId: INVESTIDOR.CRIS, CorretoraId: CORRETORA.BTG },
+            { data: '2026-10-01', quantidade: 500, valor_unitario: 22.54, taxas: 3.38, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.GOLD11, CarteiraId: CARTEIRA.MAGAR_BRASIL, PosicaoAtivoId: 86, InvestidorId: INVESTIDOR.CRIS, CorretoraId: CORRETORA.BTG },
 
             //FIIs
             { data: '2024-03-20', quantidade: 420, valor_unitario: 22.75, taxas: 2.87, TipoOperacaoId: TIPO_OPERACAO.COMPRA, TickerId: TICKER.HGBS11, CarteiraId: CARTEIRA.MAGAR_BRASIL, PosicaoAtivoId: 61, InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.INTER },
