@@ -1646,6 +1646,10 @@ await sleep(300);
             { data: '2026-09-01', valor_unitario: 0.02, total: 6.26, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.BBDC4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-09-15', valor_unitario: 0.29, total: 318.90, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.BBDC4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-09-15', valor_unitario: 0.34, total: 372.05, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.BBDC4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-10-01', valor_unitario: 0.02, total: 20.35, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.BBDC4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-10-01', valor_unitario: 0.02, total: 6.26, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.BBDC4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-11-03', valor_unitario: 0.02, total: 20.35, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.BBDC4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-11-03', valor_unitario: 0.02, total: 6.26, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.BBDC4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
 
             //BBSE3
             { data: '2024-08-30', valor_unitario: 1.39, total: 417.27, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.BBSE3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
@@ -1663,6 +1667,7 @@ await sleep(300);
             { data: '2024-05-17', valor_unitario: 0.31, total: 124.16, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.CSMG3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2024-08-30', valor_unitario: 0.42, total: 197.06, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CSMG3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2024-08-19', valor_unitario: 0.32, total: 126.83, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.CSMG3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-11-09', valor_unitario: 0.26, total: 63.27, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.CSMG3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
 
             { data: '2024-11-28', valor_unitario: 0.55, total: 110.09, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: 11, CarteiraId: CARTEIRA.DIVERSAS },
 
@@ -1709,6 +1714,10 @@ await sleep(300);
             { data: '2026-03-06', valor_unitario: 0.02, total: 34.04, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.ITSA4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-04-01', valor_unitario: 0.02, total: 20.00, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.ITSA4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-07-01', valor_unitario: 0.02, total: 20.00, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.ITSA4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-08-28', valor_unitario: 0.10, total: 95.70, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.ITSA4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-08-28', valor_unitario: 0.11, total: 113.85, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.ITSA4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-10-01', valor_unitario: 0.02, total: 22.00, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.ITSA4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-10-01', valor_unitario: 0.02, total: 20.00, TipoProventoId: TIPO_PROVENTO.JCP, TickerId: TICKER.ITSA4, CarteiraId: CARTEIRA.MAGAR_BRASIL },
 
             { data: '2024-09-20', valor_unitario: 0.07, total: 13.53, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: 8, CarteiraId: CARTEIRA.DIVERSAS },
             { data: '2024-04-15', valor_unitario: 0.16, total: 141.90, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.KEPL3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
