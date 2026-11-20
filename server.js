@@ -191,6 +191,7 @@ await sleep(300);
             { nome: 'FII BR', ativo: 'true' },
             { nome: 'Renda Variável USA', ativo: 'true' },
             { nome: 'Cripto', ativo: 'true' },
+            { nome: 'ETF de índice', ativo: 'true' },
         ]);
 
         const TIPO_ATIVO_AGRUPAMENTO = {
@@ -201,6 +202,7 @@ await sleep(300);
             FII_BR: 5,
             RENDA_VARIAVEL_USA: 6,
             CRIPTO: 7,
+            ETF_DE_INDICE: 8,
             
         };
 
@@ -249,13 +251,13 @@ await sleep(300);
             { nome: 'SGOV', descricao: 'iShare 0-3 Month Treasure Bond ETF', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ETF_USA, MoedaId: MOEDA.USD, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_FIXA, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.DOLAR },
             { nome: 'GLD', descricao: 'SPDR Gold Shares', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ETF_USA, MoedaId: MOEDA.USD, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.OURO },
             { nome: 'IAU', descricao: 'iShares Gold', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ETF_USA, MoedaId: MOEDA.USD, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.OURO },
-            { nome: 'VOO', descricao: 'Vanguard S&P 500', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ETF_USA, MoedaId: MOEDA.USD, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.RENDA_VARIAVEL_USA },            
-            { nome: 'BOVA11.SA', descricao: 'iShare Bovaci', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ETF, MoedaId: MOEDA.BRL, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL },
+            { nome: 'VOO', descricao: 'Vanguard S&P 500', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ETF_USA, MoedaId: MOEDA.USD, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.ETF_DE_INDICE },            
+            { nome: 'BOVA11.SA', descricao: 'iShare Bovaci', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ETF, MoedaId: MOEDA.BRL, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.ETF_DE_INDICE },
             { nome: 'LFTB11.SA', descricao: 'INVESTO ETF', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ETF, MoedaId: MOEDA.BRL, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_FIXA, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.RENDA_FIXA_BR },
             { nome: 'CONY', descricao: 'YieldMax COIN Option Income Strategy ETF', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ETF_USA, MoedaId: MOEDA.USD, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.CRIPTO },
             { nome: 'POMO4.SA', descricao: 'Marcopolo SA Preference Shares', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ACAO, MoedaId: MOEDA.BRL, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.ACAO_BR },
             { nome: 'VAMO3.SA', descricao: 'Vamos Locacao De Caminhoes Maquinas E Equipamentos SA', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ACAO, MoedaId: MOEDA.BRL, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.ACAO_BR },
-            { nome: 'SMAL11.SA', descricao: 'iShares BM&FBovespa Small Cap Fundo de Indice', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ETF, MoedaId: MOEDA.BRL, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.ACAO_BR },
+            { nome: 'SMAL11.SA', descricao: 'iShares BM&FBovespa Small Cap Fundo de Indice', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ETF, MoedaId: MOEDA.BRL, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.ETF_DE_INDICE },
             { nome: 'SELIC2029', descricao: 'Tesouro Selic 2029', ativo: 'true', TipoAtivoId: TIPO_ATIVO.TESOURO, MoedaId: MOEDA.BRL, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_FIXA, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.RENDA_FIXA_BR },
             { nome: 'IPCA2035', descricao: 'Tesouro IPCA+ 2035', ativo: 'true', TipoAtivoId: TIPO_ATIVO.TESOURO, MoedaId: MOEDA.BRL, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_FIXA, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.RENDA_FIXA_BR },
             { nome: 'BPAC11.SA', descricao: 'Banco BTG Pactual SA Brazilian Units', ativo: 'true', TipoAtivoId: TIPO_ATIVO.ACAO, MoedaId: MOEDA.BRL, TipoAtivoClassificacaoId: TIPO_ATIVO_CLASSIFICACAO.RENDA_VARIAVEL, TipoAtivoAgrupamentoId: TIPO_ATIVO_AGRUPAMENTO.ACAO_BR },
@@ -756,11 +758,18 @@ await sleep(300);
                 rolagem_de_id: 59,
             },
 
-            { nome: 'BPACK635', TickerId: TICKER.BPAC11, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.EM_ANDAMENTO, data_abertura: '2026-10-15', data_vencimento: '2026-11-19', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
+            { nome: 'BPACK635', TickerId: TICKER.BPAC11, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.ENCERRADA, data_abertura: '2026-10-15', data_vencimento: '2026-11-19', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
                 preco_aquisicao: 77.00, quantidade: 100, TipoOpcaoOperacaoId: TIPO_OPCAO_OPERACAO.VC, TipoOpcaoPeriodoId: TIPO_OPCAO_PERIODO.MENSAL, investido: 7700.00,
-                strike: 63.55, premio: 15.70, taxas: 2.85, data_recompra: null, preco_recompra: 0, resultado: 0,
-                preco_ativo_na_compra: 77.00, preco_ativo_no_encerramento: 0,
+                strike: 63.55, premio: 15.70, taxas: 2.85, data_recompra: '2026-11-19', preco_recompra: '0.01', resultado: '1566.15',
+                preco_ativo_na_compra: 77.00, preco_ativo_no_encerramento: '51.13',
                 TipoOperacaoTaxaId: OPERACAO_TAXA.BPAC11, rolagem_de_id: 60,
+            },
+
+            { nome: 'BPACL466', TickerId: TICKER.BPAC11, TipoOpcaoStatusId: TIPO_OPCAO_STATUS.EM_ANDAMENTO, data_abertura: '2026-11-19', data_vencimento: '2026-12-18', InvestidorId: INVESTIDOR.IGOR, CorretoraId: CORRETORA.BTG,
+                preco_aquisicao: 51.02, quantidade: 200, TipoOpcaoOperacaoId: TIPO_OPCAO_OPERACAO.VC, TipoOpcaoPeriodoId: TIPO_OPCAO_PERIODO.MENSAL, investido: 10204.00,
+                strike: 45.55, premio: 6.40, taxas: 1.70, data_recompra: null, preco_recompra: 0, resultado: 0,
+                preco_ativo_na_compra: 51.02, preco_ativo_no_encerramento: 0,
+                TipoOperacaoTaxaId: OPERACAO_TAXA.BPAC11, rolagem_de_id: 62,
             },
 
 
@@ -1374,6 +1383,7 @@ await sleep(300);
             { data: '2026-08-14', valor_unitario: 0.17, total: 97.95, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HGBS11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-09-15', valor_unitario: 0.17, total: 97.95, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HGBS11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-10-15', valor_unitario: 0.17, total: 97.95, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HGBS11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-11-16', valor_unitario: 0.17, total: 97.95, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.HGBS11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             
             //BTAL11
             { data: '2024-04-24', valor_unitario: 0.65, total: 87.10, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.BTAL11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
@@ -1440,6 +1450,7 @@ await sleep(300);
             { data: '2026-08-14', valor_unitario: 0.84, total: 89.88, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.VISC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-09-15', valor_unitario: 0.84, total: 89.88, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.VISC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-10-15', valor_unitario: 0.84, total: 89.88, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.VISC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-11-16', valor_unitario: 0.84, total: 89.88, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.VISC11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
 
             //RZTR11
             { data: '2024-04-05', valor_unitario: 0.90, total: 90.90, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.RZTR11, CarteiraId: CARTEIRA.MAGAR_BRASIL },
@@ -1689,6 +1700,8 @@ await sleep(300);
             { data: '2026-05-15', valor_unitario: 0.33, total: 258.06, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CXSE3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-05-15', valor_unitario: 0.26, total: 203.94, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CXSE3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
             { data: '2026-08-17', valor_unitario: 0.35, total: 273.70, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CXSE3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-08-17', valor_unitario: 0.35, total: 216.30, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CXSE3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
+            { data: '2026-11-17', valor_unitario: 0.35, total: 273.70, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CXSE3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
 
             //CYRE3
             { data: '2024-11-26', valor_unitario: 0.60, total: 238.71, TipoProventoId: TIPO_PROVENTO.DIVIDENDOS, TickerId: TICKER.CYRE3, CarteiraId: CARTEIRA.MAGAR_BRASIL },
